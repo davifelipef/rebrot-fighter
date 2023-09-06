@@ -1,0 +1,31 @@
+; ===================
+;|Pocket Template|
+; ===================
+
+[Info]
+name ="Template"        
+displayname ="Template" 
+author ="Magus & Lumina"         
+pal.defaults=1
+versiondate=13/06/2007
+mugenversion=
+
+[Files]
+cmd     =pocket_template.cmd   
+cns     =pocket_template.cns   
+st      =pocket_template.cns   
+sprite  =pocket_template.sff  
+anim    =pocket_template.air   
+sound   =pocket_template.snd
+stcommon=common1.cns
+pal1=pocket_template.act
+st1=specials.st
+st2=hypers.st
+st3=basics.st
+
+
+
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=
