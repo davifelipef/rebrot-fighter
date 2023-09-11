@@ -363,20 +363,16 @@ Clsn2: 1
 ; Jump Light Punch
 [Begin Action 600]
 Clsn1: 1
-  Clsn1[0] = 13, -32, 37, -20
+  Clsn1[0] = 17, -32, 41, -20
 Clsn2: 1
-  Clsn2[0] = -8, -36, 11, -11
+  Clsn2[0] = -4, -40, 15, -15
 600,0, 0,0, 10
 Clsn2: 1
   Clsn2[0] = -7, -42, 17, -13
-42,5, 0,0, -1
-
-; Jump Medium Punch
-[Begin Action 610]
-0,0, 0,0, 1
+41,1, 0,0, -1
 
 ; Jump Heavy Punch
-[Begin Action 620]
+[Begin Action 610]
 Clsn1: 1
   Clsn1[0] = 17, -29, 39, -4
 Clsn2: 1
@@ -384,7 +380,7 @@ Clsn2: 1
 620,0, 0,0, 10
 Clsn2: 1
   Clsn2[0] = -6, -40, 15, -10
-42,5, 0,0, -1
+41,1, 0,0, -1
 
 ;--------------------------------------------------
 ; Jump Light Kick
