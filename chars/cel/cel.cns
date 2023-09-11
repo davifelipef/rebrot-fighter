@@ -340,7 +340,7 @@ guardflag = MA                   ;Flags on how move is to be guarded against
 hitflag = MAF                    ;Flags of conditions that move can hit
 priority = 3, Hit                ;Attack priority: 0 (least) to 7 (most), 4 default
 ;Hit/Miss/Dodge type (Def: Hit)
-pausetime = 2, 2                ;Time attacker pauses, time opponent shakes - Default: 2,10
+pausetime = 2, 10                ;Time attacker pauses, time opponent shakes - Default: 2,10
 sparkno = 0                      ;Spark anim no (Def: set above)
 sparkxy = -10, -26               ;X-offset for the "hit spark" rel. to p2. Default: -10, -76
 ;Y-offset for the spark rel. to p1
@@ -366,14 +366,6 @@ type = ChangeState
 trigger1 = AnimTime = 0
 value = 0
 ctrl = 1 ;setting it to 1 allows the move to be interrupted
-
-; Link to the second light punch
-[State -1, Stand Light Punch]
-type = changestate
-triggerall = command = "x"
-trigger1 = ctrl
-trigger2 = stateno = 200 && movehit
-value = 200
 
 ; This allows the light punch to be cancelled into the light kick
 [State -1, Standing Light Kick]
