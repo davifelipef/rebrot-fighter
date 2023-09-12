@@ -2,7 +2,7 @@
 M.U.G.E.N ver 1.00 (2011.01.18) status log
 ------------------------------------------
 Parsing command line...
-Command line: C:\Users\davir\Documents\Programação\rebrot-fighter\mugen.exe
+Command line: C:\Users\Administrativo\Documents\Programas\rebrot-fighter\mugen.exe ff3_0 ff3_0
 Parse command line OK
 Initializing...
 Allocating game variables
@@ -22,7 +22,7 @@ Initializing font...OK
 Initializing game variables...OK
 Loading system fonts...OK
 Loading options...
-Initializing pads...OK
+Initializing pads...failed
 Reinitializing input engine...OK
 Remapping keys...OK
 Reinitializing input engine...OK
@@ -61,9 +61,10 @@ System loaded OK
 Initialize OK
 Set up graphics...timer...OK
 Initializing character info...OK
-Initializing select screen...finding characters...OK
+Playing quick VS.
 
 Entering main loop
+<<<<<<< HEAD
 Entering character select.
 attempting load and start...no BGM...attempting load and start...no BGM...Loading character chars/cel/cel.def...
   Loading info...OK
@@ -91,13 +92,27 @@ Loading character chars/liv/liv.def...
   Loading pals...(1,2)OK
   1569 expressions (677 on trigger lines)
 Character liv.def loaded OK
+=======
+>>>>>>> 3afd6bc1c2c379126c30201a5fe5b1d01690f8d7
 Initializing stage...
-  Loading BG...attempting load of sound/katyusha.mp3...hooking mixer callback...
-success!
-OK
+  Loading BG...OK
   Allocating helpers...OK
 Stage initialized OK
+Loading character chars/ff3_0/ff3_0.def...
+  Loading info...OK
+  Loading cmd command set and.cmd...OK
+  Loading cns and.cns...OK
+  Loading cmd state entry and.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff and.sff...OK
+  Loading anim and.air...OK
+  Loading snd and.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  1525 expressions (666 on trigger lines)
+Character ff3_0.def loaded OK
 Start of game loop
+<<<<<<< HEAD
 prebuffering BGM...
 End of game loop
 Total time: 14.87s
@@ -180,6 +195,22 @@ ticks: 32413, tps: 100, start 211, end 32624
 Clearing player cache...OK
 Freeing character info...OK
 Freeing select screen...OK
+=======
+End of game loop
+Total time: 54.78s
+Total frames: 3288 	Skipped frames: 0
+Avg game rate: 60.02
+Avg frame rate: 60.02
+
+Returned from main loop
+Deinitializing...
+Frames      : 3288
+Time elapsed: 54.830 sec
+ticks: 5483, tps: 100, start 57, end 5540
+
+Clearing player cache...OK
+Freeing character info...OK
+>>>>>>> 3afd6bc1c2c379126c30201a5fe5b1d01690f8d7
 Freeing fight data...OK
 Freeing system data...OK
 Freeing game variables...OK
@@ -187,6 +218,7 @@ Deinitializing input...pad...keyboard...OK
 Removing callbacks...OK
 Deintializing timer...OK
 Deinitializing graphics...OK
+<<<<<<< HEAD
 Deinitializing BGM...Cleaning up mixer callback...unhooking mixer callback...
 
 Mixer callback was entered 6889 times
@@ -195,6 +227,9 @@ Mixer callback timing stats (last 6889 calls):
 Top 10 slowest times:	180 (1), 160 (1), 142 (1), 126 (1), 124 (2), 122 (1), 119 (1), 114 (4), 113 (2), 112 (1)
 Top 10 fastest times:	4 (1), 5 (10), 6 (85), 7 (153), 8 (124), 9 (126), 10 (146), 11 (126), 12 (195), 13 (227)
 OK
+=======
+Deinitializing BGM...OK
+>>>>>>> 3afd6bc1c2c379126c30201a5fe5b1d01690f8d7
 Deinitializing sound...OK
 Successful program termination.
 

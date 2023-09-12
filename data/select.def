@@ -85,6 +85,9 @@ liv, stages/nersograd.def
  ;For example, you can insert "stages/mybg.def".
 stages/anarchy_ruins.def
 stages/rebrotown.def
+stages/rebrcity.def
+stages/phophocaland.def
+
 ;---------------------------------------------------------------------
 [Options]
  ;Here you set the maximum number of matches to fight before game ends
