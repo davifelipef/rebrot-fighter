@@ -76,22 +76,21 @@ attempting load and start...no BGM...attempting load and start...no BGM...Loadin
   Loading anim cel.air...OK
   Loading snd cel.snd...OK
   Loading pals...(1,2)OK
-  1532 expressions (670 on trigger lines)
+  1525 expressions (666 on trigger lines)
 Character cel.def loaded OK
-Loading character chars/mb2/mb2.def...
+Loading character chars/liv/liv.def...
   Loading info...OK
-  Loading cmd command set mb2.cmd...attempting load and start...no BGM...OK
-  Loading cns mb2.cns...OK
-  Loading cmd state entry mb2.cmd...OK
+  Loading cmd command set liv.cmd...attempting load and start...no BGM...OK
+  Loading cns liv.cns...OK
+  Loading cmd state entry liv.cmd...OK
   Loading common states common1.cns...OK
   Unloading command names...OK
-  Loading sff mb2.sff...OK
-  Loading anim mb2.air...OK
-  Loading snd mb2.snd...OK
-  Loading pals...OK
-  Loading learned AI mb2.ai...OK
-  1556 expressions (670 on trigger lines)
-Character mb2.def loaded OK
+  Loading sff liv.sff...OK
+  Loading anim liv.air...OK
+  Loading snd liv.snd...OK
+  Loading pals...(1,2)OK
+  1569 expressions (677 on trigger lines)
+Character liv.def loaded OK
 Initializing stage...
   Loading BG...attempting load of sound/katyusha.mp3...hooking mixer callback...
 success!
@@ -100,6 +99,103 @@ OK
 Stage initialized OK
 Start of game loop
 prebuffering BGM...
-Exit with an error.
+End of game loop
+Total time: 14.87s
+Total frames: 893 	Skipped frames: 0
+Avg game rate: 60.05
+Avg frame rate: 60.05
+
+Entering character select.
+attempting load and start...no BGM...attempting load and start...no BGM...attempting load and start...no BGM...Initializing stage...
+  Loading BG...attempting load of sound/katyusha.mp3...success!
+OK
+  Allocating helpers...OK
+Stage initialized OK
+prebuffering BGM...
+Start of game loop
+Loading character chars/bru/bru.def...
+  Loading info...OK
+  Loading cmd command set bru.cmd...OK
+  Loading cns bru.cns...OK
+  Loading cmd state entry bru.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff bru.sff...OK
+  Loading anim bru.air...OK
+  Loading snd bru.snd...OK
+  Loading pals...(1,2)OK
+  1569 expressions (677 on trigger lines)
+Character bru.def loaded OK
+End of game loop
+Total time: 127.36s
+Total frames: 7643 	Skipped frames: 0
+Avg game rate: 60.01
+Avg frame rate: 60.01
+
+attempting load and start...no BGM...attempting load and start...no BGM...Initializing stage...
+  Loading BG...attempting load of sound/katyusha.mp3...success!
+OK
+  Allocating helpers...OK
+Stage initialized OK
+Start of game loop
+prebuffering BGM...
+End of game loop
+Total time: 42.27s
+Total frames: 2537 	Skipped frames: 0
+Avg game rate: 60.02
+Avg frame rate: 60.02
+
+Entering character select.
+attempting load and start...no BGM...attempting load and start...no BGM...Loading character chars/ryuu/ryuu.def...
+  Loading info...OK
+  Loading cmd command set ryuu.cmd...OK
+  Loading cns ryuu.cns...OK
+  Loading cmd state entry ryuu.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff ryuu.sff...OK
+  Loading anim ryuu.air...OK
+  Loading snd ryuu.snd...OK
+  Loading pals...OK
+  1569 expressions (677 on trigger lines)
+Character ryuu.def loaded OK
+attempting load and start...no BGM...Initializing stage...
+  Loading BG...OK
+  Allocating helpers...OK
+Stage initialized OK
+Start of game loop
+End of game loop
+Total time: 117.85s
+Total frames: 7072 	Skipped frames: 0
+Avg game rate: 60.01
+Avg frame rate: 60.01
+
+attempting load and start...no BGM...Entering character select.
+attempting load and start...no BGM...Returned from main loop
+Deinitializing...
+Frames      : 18145
+Time elapsed: 324.130 sec
+ticks: 32413, tps: 100, start 211, end 32624
+
+Clearing player cache...OK
+Freeing character info...OK
+Freeing select screen...OK
+Freeing fight data...OK
+Freeing system data...OK
+Freeing game variables...OK
+Deinitializing input...pad...keyboard...OK
+Removing callbacks...OK
+Deintializing timer...OK
+Deinitializing graphics...OK
+Deinitializing BGM...Cleaning up mixer callback...unhooking mixer callback...
+
+Mixer callback was entered 6889 times
+Mixer callback timing stats (last 6889 calls):
+	22.000000 median, 24.411090 avg, 14.951795 sample std. dev.
+Top 10 slowest times:	180 (1), 160 (1), 142 (1), 126 (1), 124 (2), 122 (1), 119 (1), 114 (4), 113 (2), 112 (1)
+Top 10 fastest times:	4 (1), 5 (10), 6 (85), 7 (153), 8 (124), 9 (126), 10 (146), 11 (126), 12 (195), 13 (227)
+OK
+Deinitializing sound...OK
+Successful program termination.
 
 Log file successfully closed.
