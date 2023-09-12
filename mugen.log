@@ -76,13 +76,30 @@ attempting load and start...no BGM...attempting load and start...no BGM...Loadin
   Loading anim cel.air...OK
   Loading snd cel.snd...OK
   Loading pals...(1,2)OK
-  1531 expressions (669 on trigger lines)
+  1532 expressions (670 on trigger lines)
 Character cel.def loaded OK
-attempting load and start...no BGM...Initializing stage...
-  Loading BG...OK
+Loading character chars/mb2/mb2.def...
+  Loading info...OK
+  Loading cmd command set mb2.cmd...attempting load and start...no BGM...OK
+  Loading cns mb2.cns...OK
+  Loading cmd state entry mb2.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff mb2.sff...OK
+  Loading anim mb2.air...OK
+  Loading snd mb2.snd...OK
+  Loading pals...OK
+  Loading learned AI mb2.ai...OK
+  1556 expressions (670 on trigger lines)
+Character mb2.def loaded OK
+Initializing stage...
+  Loading BG...attempting load of sound/katyusha.mp3...hooking mixer callback...
+success!
+OK
   Allocating helpers...OK
 Stage initialized OK
 Start of game loop
+prebuffering BGM...
 Exit with an error.
 
 Log file successfully closed.

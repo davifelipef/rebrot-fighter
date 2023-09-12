@@ -372,20 +372,6 @@ trigger1 = AnimTime = 0
 value = 0
 ctrl = 1 ;setting it to 1 allows the move to be interrupted
 
-; This allows the light punch to be cancelled into itself
-[State 200, 5]
-type = VarAdd
-trigger1 = animelem = 200
-var(59) = 1
-trigger2 = animelem != 200 ; Reset var(59) if not in animation element 200
-var(59) = 0
-
-[State 200, 6]
-type = ChangeState
-trigger1 = animelem = 200
-trigger2 = var(59) >= 2
-value = 200
-
 ; This allows the light punch to be cancelled into the heavy punch
 [State -1, Stand Heavy Punch]
 type = changestate
