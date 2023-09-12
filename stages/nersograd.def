@@ -24,7 +24,7 @@ startx 		= 0
 starty 		= 0
 boundleft 	= -320
 boundright 	= 320
-boundhigh 	= -217
+boundhigh 	= -224
 boundlow 	= 0
 tension 	= 100
 verticalfollow 	= .75
@@ -55,7 +55,7 @@ screenleft 	= 30
 screenright 	= 30
 
 [StageInfo]
-zoffset 	= 434.0
+zoffset 	= 426.0
 autoturn 	= 1
 resetBG 	= 0
 localcoord 	= 640, 480
@@ -73,7 +73,7 @@ color 		= 0,0,0
 yscale 		= .2
 
 [Music]
-bgmusic 	= 
+bgmusic 	= sound/katyusha.mp3
 bgvolume 	= 255
 
 [BGdef]
@@ -83,20 +83,20 @@ debugbg 	= 0
 [BG image]
 type  		= normal
 spriteno 	= 0, 0
-start 		= 0,-217
+start 		= 0,-224
 delta 		= 1,1
 
 [BG image]
 type  		= normal
 spriteno 	= 0, 1
-start 		= 0,-217
+start 		= 0,-224
 delta 		= 1,1
 trans		= add
 
 [BG image]
 type  		= normal
 spriteno 	= 0, 2
-start 		= 0,-217
+start 		= 0,-224
 delta 		= 1,1
 trans		= add
 

@@ -357,23 +357,34 @@ air.velocity = -1.4,-3           ;X-velocity at which opponent is pushed,
 air.hittime = 15                 ;Time before opponent regains control in air
 
 [State 200, 2]
+type = VarSet
+trigger1 = animelem = 200
+var(59)=0
+
+[State 200, 3]
 type = PlaySnd
 trigger1 = Time = 1
 value = 0, 0
 
-[State 200, 3]
+[State 200, 4]
 type = ChangeState
 trigger1 = AnimTime = 0
 value = 0
 ctrl = 1 ;setting it to 1 allows the move to be interrupted
 
-; This allows the light punch to be cancelled into the light kick
-[State -1, Standing Light Kick]
-type = changestate
-triggerall = command = "a"
-trigger1 = ctrl
-trigger2 = stateno = 200 && movehit
-value = 230
+; This allows the light punch to be cancelled into itself
+[State 200, 5]
+type = VarAdd
+trigger1 = animelem = 200
+var(59) = 1
+trigger2 = animelem != 200 ; Reset var(59) if not in animation element 200
+var(59) = 0
+
+[State 200, 6]
+type = ChangeState
+trigger1 = animelem = 200
+trigger2 = var(59) >= 2
+value = 200
 
 ; This allows the light punch to be cancelled into the heavy punch
 [State -1, Stand Heavy Punch]
@@ -382,6 +393,14 @@ triggerall = command = "y"
 trigger1 = ctrl
 trigger2 = stateno = 200 && movehit
 value = 210
+
+; This allows the light punch to be cancelled into the light kick
+[State -1, Standing Light Kick]
+type = changestate
+triggerall = command = "a"
+trigger1 = ctrl
+trigger2 = stateno = 200 && movehit
+value = 230
 
 ;---------------------------------------------------------------------------
 ; Stand Heavy Punch
@@ -393,13 +412,13 @@ juggle  = 2                      ;Number of air juggle points move takes
 ;Commonly-used controllers:
 velset = 4,0                     ;Set velocity (x,y) (Def: no change)
 ctrl = 0                         ;Set ctrl (Def: no change)
-anim = 220                      ;Change animation (Def: no change)
+anim = 210                      ;Change animation (Def: no change)
 poweradd = 10                    ;Power to add (Def: 0)
 sprpriority = 2                  ;Set p1's sprite layering priority to 2 (in front)
 
 [State 210, 1]
 type = HitDef
-trigger1 = AnimElem = 1	   ;2 means the frame that have the hit box
+trigger1 = AnimElem = 2	   ;2 means the frame that have the hit box
 attr = S, NA                     ;Attribute: Standing, Normal Attack
 damage = 23, 0                   ;Damage that move inflicts, guard damage
 animtype = Heavy                 ;Animation type: Light, Medium, Heavy, Back (def: Light)
@@ -413,10 +432,10 @@ sparkxy = -10, -36               ;X-offset for the "hit spark" rel. to p2. Defau
 ;Y-offset for the spark rel. to p1
 hitsound = 5, 0                  ;Sound to play on hit
 guardsound = 6, 0                ;Sound to play on guard
-ground.type = Trip               ;Type: High, Low, Trip (def: Normal)
+ground.type = High               ;Type: High, Low, Trip (def: Normal)
 ground.slidetime = 4             ;Time that the opponent slides back
 ground.hittime  = 11             ;Time opponent is in hit state
-ground.velocity = -1,-8             ;Velocity at which opponent is pushed
+ground.velocity = -5            ;Velocity at which opponent is pushed
 airguard.velocity = -1.9,-.8     ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
 air.type = High                  ;Type: High, Low, Trip (def: same as ground.type)
 air.velocity = -1.4,-3           ;X-velocity at which opponent is pushed,
