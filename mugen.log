@@ -2,7 +2,7 @@
 M.U.G.E.N ver 1.00 (2011.01.18) status log
 ------------------------------------------
 Parsing command line...
-Command line: C:\Users\davir\Documents\Programação\rebrot-fighter\mugen.exe
+Command line: C:\Users\Administrativo\Documents\Programas\rebrot-fighter\mugen.exe ff3_0 ff3_0
 Parse command line OK
 Initializing...
 Allocating game variables
@@ -22,7 +22,7 @@ Initializing font...OK
 Initializing game variables...OK
 Loading system fonts...OK
 Loading options...
-Initializing pads...OK
+Initializing pads...failed
 Reinitializing input engine...OK
 Remapping keys...OK
 Reinitializing input engine...OK
@@ -61,11 +61,14 @@ System loaded OK
 Initialize OK
 Set up graphics...timer...OK
 Initializing character info...OK
-Initializing select screen...finding characters...OK
+Playing quick VS.
 
 Entering main loop
-Entering character select.
-attempting load and start...no BGM...attempting load and start...no BGM...Loading character chars/cel/cel.def...
+Initializing stage...
+  Loading BG...OK
+  Allocating helpers...OK
+Stage initialized OK
+Loading character chars/ff3_0/ff3_0.def...
   Loading info...OK
   Loading cmd command set cel.cmd...OK
   Loading cns cel.cns...OK
@@ -76,30 +79,32 @@ attempting load and start...no BGM...attempting load and start...no BGM...Loadin
   Loading anim cel.air...OK
   Loading snd cel.snd...OK
   Loading pals...(1,2)OK
-  1532 expressions (670 on trigger lines)
-Character cel.def loaded OK
-Loading character chars/mb2/mb2.def...
-  Loading info...OK
-  Loading cmd command set mb2.cmd...attempting load and start...no BGM...OK
-  Loading cns mb2.cns...OK
-  Loading cmd state entry mb2.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff mb2.sff...OK
-  Loading anim mb2.air...OK
-  Loading snd mb2.snd...OK
-  Loading pals...OK
-  Loading learned AI mb2.ai...OK
-  1556 expressions (670 on trigger lines)
-Character mb2.def loaded OK
-Initializing stage...
-  Loading BG...attempting load of sound/katyusha.mp3...hooking mixer callback...
-success!
-OK
-  Allocating helpers...OK
-Stage initialized OK
+  1525 expressions (666 on trigger lines)
+Character ff3_0.def loaded OK
 Start of game loop
-prebuffering BGM...
-Exit with an error.
+End of game loop
+Total time: 36.45s
+Total frames: 2188 	Skipped frames: 0
+Avg game rate: 60.03
+Avg frame rate: 60.03
+
+Returned from main loop
+Deinitializing...
+Frames      : 2188
+Time elapsed: 36.510 sec
+ticks: 3651, tps: 100, start 90, end 3741
+
+Clearing player cache...OK
+Freeing character info...OK
+Freeing fight data...OK
+Freeing system data...OK
+Freeing game variables...OK
+Deinitializing input...pad...keyboard...OK
+Removing callbacks...OK
+Deintializing timer...OK
+Deinitializing graphics...OK
+Deinitializing BGM...OK
+Deinitializing sound...OK
+Successful program termination.
 
 Log file successfully closed.
