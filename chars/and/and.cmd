@@ -366,6 +366,31 @@ time = 1
 
 ;-| Special Motions |------------------------------------------------------
 
+;-| Special Motions |------------------------------------------------------
+[Command]
+name = "QCF_x"
+command = ~D, DF, F, x
+
+[Command]
+name = "QCF_y"
+command = ~D, DF, F, y
+
+[Command]
+name = "QCF_z"
+command = ~D, DF, F, z
+
+[Command]
+name = "QCF_xy"
+command = ~D, DF, F, x+y
+
+[Command]
+name = "QCB_a"
+command = ~D, DF, F, a
+
+[Command]
+name = "QCB_b"
+command = ~D, DF, F, b
+
 ;-| Double Tap |-----------------------------------------------------------
 [Command]
 name = "FF"     ;Required (do not remove)
@@ -847,3 +872,18 @@ trigger1 = statetype = A
 trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
+; Ice Beam
+[State -1, Jab FB]
+type = ChangeState
+value = 1010
+triggerall = command = "QCF_y"
+;triggerall = NumProjID(3) = 0
+triggerall = power >= 100
+triggerall = statetype != A
+trigger1 = ctrl = 1
+trigger2 = stateno = 200 || stateno = 210 || stateno = 220 || stateno = 230 || stateno = 240 || stateno = 250
+;trigger2 = movecontact = 1
+trigger3 = stateno = 210 && movecontact = 1 && time < 8
+trigger4 = hitdefattr = C, NA && movecontact = 1
+;trigger1 = stateno != 1006
+trigger5 = stateno = 100
