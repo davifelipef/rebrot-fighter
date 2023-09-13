@@ -2,7 +2,7 @@
 M.U.G.E.N ver 1.00 (2011.01.18) status log
 ------------------------------------------
 Parsing command line...
-Command line: C:\Users\davir\Documents\Programação\rebrot-fighter\mugen.exe
+Command line: C:\Users\Administrativo\Documents\Programas\rebrot-fighter\mugen.exe ff3_0 ff3_0
 Parse command line OK
 Initializing...
 Allocating game variables
@@ -61,62 +61,41 @@ System loaded OK
 Initialize OK
 Set up graphics...timer...OK
 Initializing character info...OK
-Initializing select screen...finding characters...OK
+Playing quick VS.
 
 Entering main loop
-Entering character select.
-attempting load and start...no BGM...Attempting to set graphics to 1280x720x16 mode 0x0 (fullscreen)...success
-Options Screen
-Return from Options Screen
-attempting load and start...no BGM...Loading character chars/and/and.def...
-  Loading info...OK
-  Loading cmd command set and.cmd...OK
-  Loading cns and.cns...OK
-  Loading cmd state entry and.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff and.sff...OK
-  Loading anim and.air...OK
-  Loading snd and.snd...OK
-  Loading pals...(1,1)(1,2)OK
-  1525 expressions (666 on trigger lines)
-Character and.def loaded OK
-Loading character chars/mb2/mb2.def...
-  Loading info...OK
-  Loading cmd command set mb2.cmd...OK
-  Loading cns mb2.cns...OK
-  Loading cmd state entry mb2.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff mb2.sff...OK
-  Loading anim mb2.air...OK
-  Loading snd mb2.snd...OK
-  Loading pals...OK
-  Loading learned AI mb2.ai...OK
-  1556 expressions (670 on trigger lines)
-Character mb2.def loaded OK
-attempting load and start...no BGM...Initializing stage...
+Initializing stage...
   Loading BG...OK
   Allocating helpers...OK
 Stage initialized OK
+Loading character chars/ff3_0/ff3_0.def...
+  Loading info...OK
+  Loading cmd command set cel.cmd...OK
+  Loading cns cel.cns...OK
+  Loading cmd state entry cel.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff cel.sff...OK
+  Loading anim cel.air...OK
+  Loading snd cel.snd...OK
+  Loading pals...OK
+  1525 expressions (666 on trigger lines)
+Character ff3_0.def loaded OK
 Start of game loop
-Attempting to set graphics to 1280x720x16 mode 0x0...success
 End of game loop
-Total time: 88.78s
-Total frames: 5287 	Skipped frames: 2009
-Avg game rate: 59.55
-Avg frame rate: 36.92
+Total time: 30.50s
+Total frames: 1831 	Skipped frames: 0
+Avg game rate: 60.03
+Avg frame rate: 60.03
 
-attempting load and start...no BGM...Entering character select.
-attempting load and start...no BGM...Returned from main loop
+Returned from main loop
 Deinitializing...
-Frames      : 5287
-Time elapsed: 111.270 sec
-ticks: 11127, tps: 100, start 308, end 11435
+Frames      : 1831
+Time elapsed: 30.540 sec
+ticks: 3054, tps: 100, start 54, end 3108
 
 Clearing player cache...OK
 Freeing character info...OK
-Freeing select screen...OK
 Freeing fight data...OK
 Freeing system data...OK
 Freeing game variables...OK
