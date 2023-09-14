@@ -680,19 +680,34 @@ trigger1 = ctrl
 ; Throw
 [State -1, Throw]
 type = ChangeState
-value = 800
-triggerall = command = "y" || command = "z"
-triggerall = statetype = S
-triggerall = ctrl
-triggerall = stateno != 100
+value = 850
 trigger1 = command = "holdfwd"
-trigger1 = p2bodydist X < 10
-trigger1 = (p2statetype = S) || (p2statetype = C)
-trigger1 = p2movetype != H
-trigger2 = command = "holdback"
-trigger2 = p2bodydist X < 10
-trigger2 = (p2statetype = S) || (p2statetype = C)
-trigger2 = p2movetype != H
+trigger1 = command = "y"
+trigger1 = Var(1) = 0
+trigger1 = statetype = S
+trigger1 = stateno != 100
+trigger1 = P2bodydist X <= 10
+trigger1 = P2movetype != H
+trigger1 = ctrl = 1
+
+
+;---------------------------------------------------------------------------
+; Throw
+;[State -1, Throw]
+;type = ChangeState
+;value = 800
+;triggerall = command = "y" || command = "z"
+;triggerall = statetype = S
+;triggerall = ctrl
+;triggerall = stateno != 100
+;trigger1 = command = "holdfwd"
+;trigger1 = p2bodydist X < 10
+;trigger1 = (p2statetype = S) || (p2statetype = C)
+;trigger1 = p2movetype != H
+;trigger2 = command = "holdback"
+;trigger2 = p2bodydist X < 10
+;trigger2 = (p2statetype = S) || (p2statetype = C)
+;trigger2 = p2movetype != H
 
 ;===========================================================================
 ;---------------------------------------------------------------------------
