@@ -70,32 +70,30 @@ Initializing stage...
 Stage initialized OK
 Loading character chars/ff3_0/ff3_0.def...
   Loading info...OK
-  Loading cmd command set ralfgb.cmd...OK
-  Loading cns ralfgb.cns...OK
-  Loading cns Special.st...OK
-  Loading cns ai.st...OK
-  Loading cmd state entry ralfgb.cmd...OK
-  Loading common states common.cns...OK
+  Loading cmd command set mb2.cmd...OK
+  Loading cns mb2.cns...OK
+  Loading cmd state entry mb2.cmd...OK
+  Loading common states common1.cns...OK
   Unloading command names...OK
-  Loading sff ralfgb.sff...OK
-  Loading anim ralfgb.air...OK
-  Loading snd ralfgb.snd...OK
-  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
-  SFF v1.01 palette hack engaged.
-  5816 expressions (1840 on trigger lines)
+  Loading sff mb2.sff...OK
+  Loading anim mb2.air...OK
+  Loading snd mb2.snd...OK
+  Loading pals...OK
+  Loading learned AI mb2.ai...OK
+  1556 expressions (670 on trigger lines)
 Character ff3_0.def loaded OK
 Start of game loop
 End of game loop
-Total time: 102.18s
-Total frames: 6132 	Skipped frames: 0
-Avg game rate: 60.01
-Avg frame rate: 60.01
+Total time: 50.77s
+Total frames: 3047 	Skipped frames: 0
+Avg game rate: 60.02
+Avg frame rate: 60.02
 
 Returned from main loop
 Deinitializing...
-Frames      : 6132
-Time elapsed: 102.320 sec
-ticks: 10232, tps: 100, start 54, end 10286
+Frames      : 3047
+Time elapsed: 50.820 sec
+ticks: 5082, tps: 100, start 54, end 5136
 
 Clearing player cache...OK
 Freeing character info...OK
