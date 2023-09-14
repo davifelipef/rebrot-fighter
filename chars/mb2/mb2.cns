@@ -768,7 +768,7 @@ ctrl = 1
 type    = A
 movetype= A
 physics = A
-juggle  = 2
+juggle  = 5
 poweradd= 5
 ctrl = 0
 anim = 600
@@ -807,7 +807,7 @@ value = 1
 type = changestate
 triggerall = command = "y"
 trigger1 = ctrl
-trigger2 = stateno = 600 && movecontact
+trigger2 = stateno = 600 && movehit
 value = 610
 
 ;---------------------------------------------------------------------------
@@ -817,7 +817,7 @@ value = 610
 type    = A
 movetype= A
 physics = A
-juggle  = 4
+juggle  = 10
 poweradd= 30
 ctrl = 0
 anim = 610
@@ -846,13 +846,6 @@ ground.slidetime = 12
 ground.hittime  = 14
 ground.velocity = -6
 air.velocity = -3,-4
-
-[State -1, Jump Light Punch]
-type = changestate
-triggerall = command = "x"
-trigger1 = ctrl
-trigger2 = stateno = 610 && movecontact
-value = 600
 
 ;---------------------------------------------------------------------------
 ;Jump Medium Punch
@@ -931,7 +924,7 @@ ground.velocity = -7
 air.velocity = -3,-4
 
 ;---------------------------------------------------------------------------
-;Kung Fu Throw - Attempt
+;Throw - Attempt
 ; CNS difficulty: medium-advanced
 ; Description: Throws are not difficult to make, although then can be
 ;     tedious at times. Throw attempt states have a HitDef of a
@@ -985,7 +978,7 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-;Kung Fu Throw - Throwing the opponent
+;Throwing the opponent
 ; Description: In this state, KFM throws the opponent by binding him to
 ;     various offsets based on his current frame of animation. For
 ;     example, [State 810, Bind 1] binds the opponent to an offset of
@@ -1028,7 +1021,7 @@ value = 800, 0
 [State 810, Bind 1]
 type = TargetBind
 trigger1 = AnimElemTime(2) < 0
-pos = 28, 0
+pos = 18, 0 ; default: 28, 0
 
 [State 810, Width 2-11]
 type = Width
@@ -1118,7 +1111,7 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-;Thrown by Kung Fu Throw
+;Thrown
 ; (a custom gethit state)
 ; Description: This is the state that the opponent changes to after being
 ;     hit by KFM's throw HitDef. The important thing here is to use a
@@ -1147,7 +1140,7 @@ trigger1 = !gethitvar(isbound)
 value = 5050
 
 ;---------------------------------------------------------------------------
-;Thrown by Kung Fu Throw - thrown into the air
+;Thrown into the air
 ; (a custom gethit state)
 ; Description: This state has the opponent flying through the air and
 ;     falling down onto the ground. The SelfState controller sets the
