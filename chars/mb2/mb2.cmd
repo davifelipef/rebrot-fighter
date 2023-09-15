@@ -659,13 +659,23 @@ value = 9742
 
 ;===========================================================================
 ;---------------------------------------------------------------------------
-; Run Fwd
-[State -1, Run Fwd]
+; Choose between having a hop or a run forward
+; Hop Forward
+[State -1, Hop Forward]
 type = ChangeState
-value = 100
+value = 11105
 trigger1 = command = "FF"
 trigger1 = statetype = S
 trigger1 = ctrl
+
+; Run Fwd
+;[State -1, Run Fwd]
+;type = ChangeState
+;value = 100
+;trigger1 = command = "FF"
+;trigger1 = command = "holdfwd"
+;trigger1 = statetype = S
+;trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
 ; Run Back
