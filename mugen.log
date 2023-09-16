@@ -2,7 +2,7 @@
 M.U.G.E.N ver 1.00 (2011.01.18) status log
 ------------------------------------------
 Parsing command line...
-Command line: C:\Users\Administrativo\Documents\Programas\rebrot-fighter\mugen.exe ff3_0 ff3_0
+Command line: C:\Users\davir\Documents\Programação\rebrot-fighter\mugen.exe
 Parse command line OK
 Initializing...
 Allocating game variables
@@ -22,7 +22,7 @@ Initializing font...OK
 Initializing game variables...OK
 Loading system fonts...OK
 Loading options...
-Initializing pads...failed
+Initializing pads...OK
 Reinitializing input engine...OK
 Remapping keys...OK
 Reinitializing input engine...OK
@@ -61,14 +61,14 @@ System loaded OK
 Initialize OK
 Set up graphics...timer...OK
 Initializing character info...OK
-Playing quick VS.
+Initializing select screen...finding characters...OK
 
 Entering main loop
-Initializing stage...
-  Loading BG...OK
-  Allocating helpers...OK
-Stage initialized OK
-Loading character chars/ff3_0/ff3_0.def...
+Entering character select.
+attempting load and start...no BGM...Attempting to set graphics to 1280x720x16 mode 0x0 (fullscreen)...success
+Options Screen
+Return from Options Screen
+attempting load and start...no BGM...Loading character chars/mb2/mb2.def...
   Loading info...OK
   Loading cmd command set mb2.cmd...OK
   Loading cns mb2.cns...OK
@@ -81,22 +81,44 @@ Loading character chars/ff3_0/ff3_0.def...
   Loading pals...OK
   Loading learned AI mb2.ai...OK
   1548 expressions (663 on trigger lines)
-Character ff3_0.def loaded OK
+Character mb2.def loaded OK
+Loading character chars/ryuu/ryuu.def...
+  Loading info...OK
+  Loading cmd command set ryuu.cmd...OK
+  Loading cns ryuu.cns...OK
+  Loading cmd state entry ryuu.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff ryuu.sff...OK
+  Loading anim ryuu.air...OK
+  Loading snd ryuu.snd...OK
+  Loading pals...OK
+  1569 expressions (677 on trigger lines)
+Character ryuu.def loaded OK
+attempting load and start...no BGM...Initializing stage...
+  Loading BG...attempting load of sound/katyusha.mp3...hooking mixer callback...
+success!
+OK
+  Allocating helpers...OK
+Stage initialized OK
 Start of game loop
+prebuffering BGM...
 End of game loop
-Total time: 37.79s
-Total frames: 2268 	Skipped frames: 1
-Avg game rate: 60.02
-Avg frame rate: 59.99
+Total time: 401.66s
+Total frames: 24080 	Skipped frames: 10948
+Avg game rate: 59.95
+Avg frame rate: 32.69
 
-Returned from main loop
+attempting load and start...no BGM...Entering character select.
+attempting load and start...no BGM...Returned from main loop
 Deinitializing...
-Frames      : 2268
-Time elapsed: 37.830 sec
-ticks: 3783, tps: 100, start 56, end 3839
+Frames      : 24080
+Time elapsed: 423.200 sec
+ticks: 42320, tps: 100, start 378, end 42698
 
 Clearing player cache...OK
 Freeing character info...OK
+Freeing select screen...OK
 Freeing fight data...OK
 Freeing system data...OK
 Freeing game variables...OK
@@ -104,7 +126,14 @@ Deinitializing input...pad...keyboard...OK
 Removing callbacks...OK
 Deintializing timer...OK
 Deinitializing graphics...OK
-Deinitializing BGM...OK
+Deinitializing BGM...Cleaning up mixer callback...unhooking mixer callback...
+
+Mixer callback was entered 8741 times
+Mixer callback timing stats (last 8741 calls):
+	43.000000 median, 50.660565 avg, 43.517582 sample std. dev.
+Top 10 slowest times:	3185 (1), 979 (1), 736 (1), 693 (1), 615 (1), 471 (1), 417 (1), 295 (1), 283 (1), 270 (1)
+Top 10 fastest times:	9 (1), 10 (1), 11 (1), 12 (1), 14 (3), 15 (1), 16 (3), 17 (4), 18 (4), 19 (3)
+OK
 Deinitializing sound...OK
 Successful program termination.
 
