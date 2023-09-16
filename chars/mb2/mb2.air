@@ -162,6 +162,12 @@ Clsn2: 1
   Clsn2[0] = -13, -46, 17, 0
 105,0, 0,0, -1
 
+; Hop forward
+[Begin Action 106]
+Clsn2: 1
+  Clsn2[0] = -8, -37, 11, -5
+106,0, 0,0, -1
+
 ;--------------------
 ; GUARDSTART (stand)
 [Begin Action 120]
@@ -322,7 +328,7 @@ Clsn1: 1
 200,0, 0,0, 2
 
 ;-----------------------------------
-; Stand Strong Punch
+; Stand Heavy Punch
 [Begin Action 210]
 Clsn2: 1
   Clsn2[0] = -14, -43, 18, 0
@@ -337,16 +343,16 @@ Clsn2: 1
 210,2, 0,0, 7
 Clsn2: 1
   Clsn2[0] = -12, -40, 19, 0
-210,3, 0,0, 5
+20,1, 0,0, 5
 
 ; Standing Medium Punch (Light Kick)
 [Begin Action 230]
 Clsn2: 1
   Clsn2[0] = -18, -38, 17, 0
-230,0, 0,0, 7
+230,0, 0,0, 5
 Clsn2: 1
   Clsn2[0] = -13, -36, 19, 0
-230,1, 0,0, 3
+230,1, 0,0, 4
 Clsn1: 1
   Clsn1[0] = 18, -30, 39, -16
 Clsn2: 1
@@ -354,10 +360,10 @@ Clsn2: 1
 230,2, 0,0, 7
 Clsn2: 1
   Clsn2[0] = -15, -37, 19, 0
-230,1, 0,0, 3
+230,1, 0,0, 5
 Clsn2: 1
   Clsn2[0] = -17, -38, 18, 0
-230,0, 0,0, 7
+230,0, 0,0, 4
 
 ; Dodge (standing strong kick)
 [Begin Action 240]
@@ -381,7 +387,7 @@ Clsn2: 1
 [Begin Action 410]
 Clsn2Default: 1
   Clsn2[0] = -8, -41, 20, 0
-410,0, 0,0, 4
+230,1, 0,0, 4
 Clsn1: 1
   Clsn1[0] = 17, -35, 30, -15
 410,1, 0,0, 4
@@ -428,13 +434,19 @@ Clsn2Default: 1
 
 ; Jump light punch
 [Begin Action 600]
+Clsn2: 1
+  Clsn2[0] = -9, -48, 14, -18
+600,0, 0,0, 3
 Clsn1: 1
   Clsn1[0] = 14, -38, 34, -26
 Clsn2: 1
-  Clsn2[0] = -15, -52, 14, -13
-600,0, 0,0, 10
+  Clsn2[0] = -8, -50, 12, -13
+600,1, 0,0, 7
 Clsn2: 1
-  Clsn2[0] = -11, -50, 22, -6
+  Clsn2[0] = -8, -50, 12, -13
+600,0, 0,0, 3
+Clsn2: 1
+  Clsn2[0] = -10, -50, 14, -11
 41,1, 0,0, -1
 
 ; Jump heavy punch
@@ -536,22 +548,21 @@ Clsn2: 1
 ;---------------------------
 ; Stand/Air Hit high (light)
 [Begin Action 5000]
-Clsn2: 2
-  Clsn2[0] = -16, -30, 1, 0
-  Clsn2[1] = 3, -14, 10, -2
+Clsn2: 1
+  Clsn2[0] = -14, -33, 3, -3
 5010,0, 0,0, 4
 
 ;Stand/Air Hit high (medium)
 [Begin Action 5001]
 Clsn2: 1
-  Clsn2[0] = -10, -22, 11, -1
-5000,10, 0,0, 5
+  Clsn2[0] = -14, -33, 3, -3
+5010,0, 0,0, 4
 
 ;Stand/Air Hit high (hard)
 [Begin Action 5002]
 Clsn2: 1
-  Clsn2[0] = -18, -38, 16, 0
-5010,0, 0,0, 5
+  Clsn2[0] = -14, -33, 3, -3
+5010,0, 0,0, 4
 
 ;---------------------------
 ;Stand Recover high (light)
@@ -576,20 +587,20 @@ Clsn2: 1
 ;Stand/Air Hit low (light)
 [Begin Action 5010]
 Clsn2: 1
-  Clsn2[0] = -20, -38, 8, 0
-5010, 0, 0,0, 5
+  Clsn2[0] = -14, -33, 3, -3
+5010,0, 0,0, 4
 
 ;Stand/Air Hit low (medium)
 [Begin Action 5011]
 Clsn2: 1
-  Clsn2[0] = -10, -24, 16, 0
+  Clsn2[0] = -10, -30, 8, -2
 5000,10, 0,0, 5
 
 ;Stand/Air Hit low (hard)
 [Begin Action 5012]
-Clsn2Default: 1
-  Clsn2[0] = -21, -41, 16, 0
-5010,0, 0,0, 1
+Clsn2: 1
+  Clsn2[0] = -14, -33, 3, -3
+5010,0, 0,0, 4
 
 ;---------------------------
 ;Stand Recover low (light)
@@ -613,21 +624,21 @@ Clsn2: 1
 ;---------------------------
 ;Crouch Hit (light)
 [Begin Action 5020]
-Clsn2Default: 1
-  Clsn2[0] = -21, -39, 14, 0
-5010,0, 0,0, 5
+Clsn2: 1
+  Clsn2[0] = -14, -33, 3, -3
+5010,0, 0,0, 4
 
 ;Crouch Hit (medium)
 [Begin Action 5021]
-Clsn2Default: 1
-  Clsn2[0] = -20, -40, 18, 0
-5010,0, 0,0, 5
+Clsn2: 1
+  Clsn2[0] = -14, -33, 3, -3
+5010,0, 0,0, 4
 
 ;Crouch Hit (hard)
 [Begin Action 5022]
-Clsn2Default: 1
-  Clsn2[0] = -22, -39, 18, 0
-5010,0, 0,0, 5
+Clsn2: 1
+  Clsn2[0] = -14, -33, 3, -3
+5010,0, 0,0, 4
 
 ;---------------------------
 ;Crouch Recover (light)
@@ -686,24 +697,21 @@ Clsn2: 1
 ;Air Fall (up-type, coming down)
 [Begin Action 5061]
 Clsn2: 1
-  Clsn2[0] = -13, -85, 13, -32
+  Clsn2[0] = -9, -85, 13, -35
 5060,10, 0,0, -1
 
 ;---------------------------
 ;Tripped
 [Begin Action 5070]
 Clsn2: 1
-  Clsn2[0] = -12, -38, 18, -1
-5010,0, 8,0, 5
-Clsn2: 1
-  Clsn2[0] = -17, -81, 3, -32
-5060,0, -8,0, -1
+  Clsn2[0] = -14, -33, 3, -3
+5010,0, 0,0, 4
 
 ;---------------------------
 ;LieDown Hit (stay down)
 [Begin Action 5080]
 Clsn2Default: 1
- Clsn2[0] =  22,  0,-26,-21
+  Clsn2[0] = -19, -21, 20, -1
 5040,20, 0,0, 4
 5040,10, 0,0, -1
 
@@ -734,13 +742,13 @@ Clsn2Default: 1
 ; LieDown
 [Begin Action 5110]
 Clsn2: 1
-  Clsn2[0] = -24, -20, 26, 1
+  Clsn2[0] = -24, -12, 26, 1
 5040,10, 0,0, 1
 
 ; Get up from LieDown
 [Begin Action 5120]
 Clsn2Default: 1
-  Clsn2[0] = -18, -30, 17, 0
+  Clsn2[0] = -16, -30, 3, 0
 5040,11, 0,0, 5
 Clsn2Default: 1
   Clsn2[0] = -8, -37, 18, 0
@@ -751,7 +759,7 @@ Clsn2Default: 1
 ;LieDead animation
 [Begin Action 5150]
 Clsn2: 1
-  Clsn2[0] = -24, -20, 27, 1
+  Clsn2[0] = -24, -13, 27, 1
 5040,10, 0,0, 1
 
 ; Bounce into air

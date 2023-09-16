@@ -119,8 +119,8 @@ victory7 = "なんだと！彼女はここにもいないと？"
 ; var(2)  - Used in Kung Fu Throw (state 800) to remember if fwd was being
 ;           held (remembered from state 800 through state 810).
 
-
 ;---------------------------------------------------------------------------
+
 ; Lose by Time Over
 ; CNS difficulty: basic
 [Statedef 170]
@@ -348,7 +348,7 @@ guardsound = 6, 0                ;Sound to play on guard
 ground.type = High               ;Type: High, Low, Trip (def: Normal)
 ground.slidetime = 4             ;Time that the opponent slides back
 ground.hittime  = 11             ;Time opponent is in hit state
-ground.velocity = -3             ;Velocity at which opponent is pushed
+ground.velocity = -7             ;Distance of pushback after a successful hit 
 airguard.velocity = -1.9,-.8     ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
 air.type = High                  ;Type: High, Low, Trip (def: same as ground.type)
 air.velocity = -1.4,-3           ;X-velocity at which opponent is pushed,
@@ -390,12 +390,11 @@ movetype= A                      ;Move-type: A-attack, I-idle, H-gethit
 physics = S                      ;Physics: S-stand, C-crouch, A-air
 juggle  = 2                      ;Number of air juggle points move takes
 ;Commonly-used controllers:
-velset = 0,0                     ;Set velocity (x,y) (Def: no change)
+velset = 3,0                     ;Set velocity (x,y) (Def: no change)
 ctrl = 0                         ;Set ctrl (Def: no change)
 anim = 210                       ;Change animation (Def: no change)
 poweradd = 10                    ;Power to add (Def: 0)
 sprpriority = 2                  ;Set p1's sprite layering priority to 2 (in front)
-
 
 [State 210, 1]
 type = HitDef
@@ -416,7 +415,7 @@ guardsound = 6, 0                ;Sound to play on guard
 ground.type = High               ;Type: High, Low, Trip (def: Normal)
 ground.slidetime = 4             ;Time that the opponent slides back
 ground.hittime  = 11             ;Time opponent is in hit state
-ground.velocity = -3             ;Velocity at which opponent is pushed
+ground.velocity = -7             ;Velocity at which opponent is pushed
 airguard.velocity = -1.9,-.8     ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
 air.type = High                  ;Type: High, Low, Trip (def: same as ground.type)
 air.velocity = -1.4,-3           ;X-velocity at which opponent is pushed,
@@ -776,12 +775,12 @@ sprpriority = 2
 
 [State 600, 1]
 type = PlaySnd
-trigger1 = Time = 1
+trigger1 = Time = 2
 value = 0, 0
 
 [State 600, 2]
 type = HitDef
-trigger1 = Time = 0
+trigger1 = Time = 2
 attr = A, NA
 damage    = 20
 guardflag = HA
@@ -1330,6 +1329,69 @@ velset = 0,0
 [State 9201, 9]
 type = DestroySelf
 trigger1 = animtime = 0
+
+;---------------------------------------------------------------------------
+; Hop forwards
+[Statedef 11105]
+type    = A
+physics = A
+ctrl = 0
+anim = 106
+sprpriority = 1
+
+[State 11105, 1]
+type = VelSet
+trigger1 = Time = 0
+x = const(velocity.run.fwd.x)
+y = const(velocity.jump.y)*0.4
+
+[State 11105, 2]
+type = CtrlSet
+trigger1 = Time = 2
+value = 1
+
+[State 11105, 3]
+type = ChangeState
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 11106
+
+;---------------------------------------------------------------------------
+; Hop forwards (land)
+[Statedef 11106]
+type    = S
+physics = S
+ctrl = 0
+anim = 47
+
+[State 11106, 1]
+type = VelSet
+trigger1 = Time = 0
+y = 0
+
+[State 11106, 2]
+type = PosSet
+trigger1 = Time = 0
+y = 0
+
+[State 11106, 3]
+type = MakeDust
+trigger1 = Time = 2
+pos = 0, 0
+spacing = 1
+
+[State 11106, 4]
+type = VelSet
+trigger1 = abs(vel x) < Const(movement.stand.friction.threshold)
+x = 0
+
+[State 11106, 5]
+type = ChangeState
+trigger1 = Time = 7
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
 
 
 ;---------------------------------------------------------------------------
