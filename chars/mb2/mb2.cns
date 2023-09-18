@@ -923,6 +923,7 @@ ground.velocity = -7
 air.velocity = -3,-4
 
 ;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
 ;Throw - Attempt
 ; CNS difficulty: medium-advanced
 ; Description: Throws are not difficult to make, although then can be
@@ -977,7 +978,7 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-;Throwing the opponent
+;Throw 
 ; Description: In this state, KFM throws the opponent by binding him to
 ;     various offsets based on his current frame of animation. For
 ;     example, [State 810, Bind 1] binds the opponent to an offset of
@@ -1020,22 +1021,22 @@ value = 800, 0
 [State 810, Bind 1]
 type = TargetBind
 trigger1 = AnimElemTime(2) < 0
-pos = 18, 0 ; default: 28, 0
+pos = 28, 0
 
 [State 810, Width 2-11]
 type = Width
 trigger1 = AnimElemTime(2) >= 0 && AnimElemTime(12) < 0
-edge = 20,0
+edge = 60,0
 
 [State 810, Bind 2-4]
 type = TargetBind
 trigger1 = AnimElemTime(2) >= 0 && AnimElemTime(5) < 0
-pos = 18, 0
+pos = 58, 0
 
 [State 810, Bind 5]
 type = TargetBind
 trigger1 = AnimElemTime(5) >= 0 && AnimElemTime(6) < 0
-pos = 20, 0
+pos = 47, 0
 
 [State 810, holdfwd - Turn 6] ;If was holding fwd before, turn now
 type = Turn
@@ -1110,7 +1111,7 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-;Thrown
+;Thrown 
 ; (a custom gethit state)
 ; Description: This is the state that the opponent changes to after being
 ;     hit by KFM's throw HitDef. The important thing here is to use a
@@ -1180,33 +1181,6 @@ type = SelfState
 trigger1 = Vel Y > 0
 trigger1 = Pos Y >= 0
 value = 5100 ;Hit ground
-
-;---------------------------------------------------------------------------
-; Throw attempt
-;[Statedef 850]
-;type = S
-;movetype = A
-;physics = S
-;anim = 850
-;velset = 0,0
-;ctrl = 0
-
-;[State 850, 1]
-;type = HitDef
-;trigger1 = AnimElem = 1
-;attr = S, NT
-;priority = 2, miss
-;sparkno = -1
-;snap = 32,0,0,1
-;p1stateno = 860
-;p2stateno = 870
-
-;[State 850, 2]
-;type = ChangeState
-;trigger1 = AnimTime = 0
-;value = 0
-;ctrl = 1
-
 
 ;---------------------------------------------------------------------------
 ; Special Moves
