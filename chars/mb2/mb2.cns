@@ -1010,98 +1010,76 @@ var(2) = command = "holdfwd"
 
 [State 810, Grab Sound]
 type = PlaySnd
-trigger1 = AnimElem = 2
+trigger1 = AnimElem = 1
 value = 1, 1
 
 [State 810, Throw Sound]
 type = PlaySnd
-trigger1 = AnimElem = 7
+trigger1 = AnimElem = 2
 value = 800, 0
 
+; the y on this pos controls the height the character is lift on start
 [State 810, Bind 1]
 type = TargetBind
-trigger1 = AnimElemTime(2) < 0
-pos = 28, 0
+trigger1 = AnimElem = 1
+pos = 27.666666666667, -2 ; default y: -10.3333333333333
 
-[State 810, Width 2-11]
-type = Width
-trigger1 = AnimElemTime(2) >= 0 && AnimElemTime(12) < 0
-edge = 60,0
-
-[State 810, Bind 2-4]
+[State 810, Bind 2]
 type = TargetBind
-trigger1 = AnimElemTime(2) >= 0 && AnimElemTime(5) < 0
-pos = 58, 0
+trigger1 = AnimElem = 2
+pos = 13,15 ;default y: -14.666666666667
 
+[State 810, Bind 3]
+type = TargetBind
+trigger1 = AnimElem = 3
+pos = -12.333333333333, -20 ;default y: -40
+
+; the y on this pos controls the maximum height the character is thrown
+[State 810, Bind 4]
+type = TargetBind
+trigger1 = AnimElem = 4
+pos = -51, -10 ;default y: 2
+
+; the y on this control the height of the first bounce
 [State 810, Bind 5]
 type = TargetBind
-trigger1 = AnimElemTime(5) >= 0 && AnimElemTime(6) < 0
-pos = 47, 0
+trigger1 = AnimElem = 5
+pos = 76.333333333333, 80 ;default y: 64.666666666667
 
 [State 810, holdfwd - Turn 6] ;If was holding fwd before, turn now
 type = Turn
 trigger1 = var(2)
-trigger1 = AnimElem = 6
+trigger1 = AnimElem = 3 ; this is the animation element where the character turns to the opposite side
 
 [State 810, holdfwd - Pos 6] ;If was holding fwd before, move a little
 type = PosAdd
 trigger1 = var(2)
-trigger1 = AnimElem = 6
+trigger1 = AnimElem = 3 ; this is the animation element where the character turns to the opposite side
 x = -37
 
 [State 810, holdfwd - Turn Target 6] ;If was holding fwd before, turn target too
 type = TargetFacing
 trigger1 = var(2)
-trigger1 = AnimElem = 6
+trigger1 = AnimElem = 3 ; this is the animation element where the character turns to the opposite side
 value = -1
-
-[State 810, Bind 6]
-type = TargetBind
-trigger1 = AnimElemTime(6) >= 0 && AnimElemTime(7) < 0
-pos = 41, -60
-
-[State 810, Bind 7]
-type = TargetBind
-trigger1 = AnimElemTime(7) >= 0 && AnimElemTime(8) < 0
-pos = 25, -75
-
-[State 810, Bind 8]
-type = TargetBind
-trigger1 = AnimElemTime(8) >= 0 && AnimElemTime(9) < 0
-pos = 15, -90
-
-[State 810, Bind 9]
-type = TargetBind
-trigger1 = AnimElemTime(9) >= 0 && AnimElemTime(10) < 0
-pos = -5, -96
-
-[State 810, Bind 10]
-type = TargetBind
-trigger1 = AnimElemTime(10) >= 0 && AnimElemTime(11) < 0
-pos = -14, -90
-
-[State 810, Bind 11]
-type = TargetBind
-trigger1 = AnimElem = 11
-pos = -50, -50
 
 [State 810, Hurt 11]
 type = TargetLifeAdd
-trigger1 = AnimElem = 11
+trigger1 = AnimElem = 5
 value = -78
 
 [State 810, Throw 11]
 type = TargetState
-trigger1 = AnimElem = 11
+trigger1 = AnimElem = 5
 value = 821
 
 [State 810, Turn 12]
 type = Turn
-trigger1 = AnimElem = 12
+trigger1 = AnimElem = 5
 
 [State 810, Pos 15]
 type = PosAdd
-trigger1 = AnimElem = 15
+trigger1 = AnimElem = 5
 x = -10
 
 [State 810, State End]
@@ -1151,7 +1129,7 @@ value = 5050
 type    = A
 movetype= H
 physics = N
-velset = 2.8,-7
+velset = 2.8,-7 ; default: 2.8,-7
 poweradd = 40
 
 [State 821, 1] ;Gravity
