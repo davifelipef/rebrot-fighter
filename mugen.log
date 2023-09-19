@@ -84,16 +84,16 @@ Loading character chars/ff3_0/ff3_0.def...
 Character ff3_0.def loaded OK
 Start of game loop
 End of game loop
-Total time: 30.13s
-Total frames: 1809 	Skipped frames: 0
+Total time: 28.30s
+Total frames: 1699 	Skipped frames: 0
 Avg game rate: 60.04
 Avg frame rate: 60.04
 
 Returned from main loop
 Deinitializing...
-Frames      : 1809
-Time elapsed: 30.210 sec
-ticks: 3021, tps: 100, start 57, end 3078
+Frames      : 1699
+Time elapsed: 28.340 sec
+ticks: 2834, tps: 100, start 51, end 2885
 
 Clearing player cache...OK
 Freeing character info...OK
