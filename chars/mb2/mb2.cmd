@@ -661,21 +661,21 @@ value = 9742
 ;---------------------------------------------------------------------------
 ; Choose between having a hop or a run forward
 ; Hop Forward
-[State -1, Hop Forward]
-type = ChangeState
-value = 11105
-trigger1 = command = "FF"
-trigger1 = statetype = S
-trigger1 = ctrl
-
-; Run Fwd
-;[State -1, Run Fwd]
+;[State -1, Hop Forward]
 ;type = ChangeState
-;value = 100
+;value = 11105
 ;trigger1 = command = "FF"
-;trigger1 = command = "holdfwd"
 ;trigger1 = statetype = S
 ;trigger1 = ctrl
+
+; Run Fwd
+[State -1, Run Fwd]
+type = ChangeState
+value = 100
+trigger1 = command = "FF"
+trigger1 = command = "holdfwd"
+trigger1 = statetype = S
+trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
 ; Run Back
@@ -687,37 +687,22 @@ trigger1 = statetype = S
 trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
-; Throw
+;Throw
 [State -1, Throw]
 type = ChangeState
-value = 850
+value = 800
+triggerall = command = "y"
+triggerall = statetype = S
+triggerall = ctrl
+triggerall = stateno != 100
 trigger1 = command = "holdfwd"
-trigger1 = command = "y"
-trigger1 = Var(1) = 0
-trigger1 = statetype = S
-trigger1 = stateno != 100
-trigger1 = P2bodydist X <= 10
-trigger1 = P2movetype != H
-trigger1 = ctrl = 1
-
-
-;---------------------------------------------------------------------------
-; Throw
-;[State -1, Throw]
-;type = ChangeState
-;value = 800
-;triggerall = command = "y" || command = "z"
-;triggerall = statetype = S
-;triggerall = ctrl
-;triggerall = stateno != 100
-;trigger1 = command = "holdfwd"
-;trigger1 = p2bodydist X < 10
-;trigger1 = (p2statetype = S) || (p2statetype = C)
-;trigger1 = p2movetype != H
-;trigger2 = command = "holdback"
-;trigger2 = p2bodydist X < 10
-;trigger2 = (p2statetype = S) || (p2statetype = C)
-;trigger2 = p2movetype != H
+trigger1 = p2bodydist X < 3
+trigger1 = (p2statetype = S) || (p2statetype = C)
+trigger1 = p2movetype != H
+trigger2 = command = "holdback"
+trigger2 = p2bodydist X < 5
+trigger2 = (p2statetype = S) || (p2statetype = C)
+trigger2 = p2movetype != H
 
 ;===========================================================================
 ;---------------------------------------------------------------------------
