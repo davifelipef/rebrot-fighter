@@ -1021,59 +1021,66 @@ value = 800, 0
 [State 810, Bind 1]
 type = TargetBind
 trigger1 = AnimElemTime(2) < 0
-pos = 28, 0
+pos = 28, 0 ; default:28, 0
 
 [State 810, Width 2-11]
 type = Width
 trigger1 = AnimElemTime(2) >= 0 && AnimElemTime(12) < 0
-edge = 60,0
+edge = 10,0 ; default: 60,0
 
+; getting grabbed
 [State 810, Bind 2-4]
 type = TargetBind
 trigger1 = AnimElemTime(2) >= 0 && AnimElemTime(5) < 0
-pos = 58, 0
+pos = 30, 0
 
+; this changed nothing, apparently
 [State 810, Bind 5]
 type = TargetBind
 trigger1 = AnimElemTime(5) >= 0 && AnimElemTime(6) < 0
-pos = 47, 0
+pos = 17, 0 ; default: 47, 0
 
-[State 810, holdfwd - Turn 6] ;If was holding fwd before, turn now
+; turns the character if it was holding forward
+[State 810, holdfwd - Turn 6] 
 type = Turn
 trigger1 = var(2)
 trigger1 = AnimElem = 6
 
-[State 810, holdfwd - Pos 6] ;If was holding fwd before, move a little
+; move the character a little if it was holding forward
+[State 810, holdfwd - Pos 6] 
 type = PosAdd
 trigger1 = var(2)
 trigger1 = AnimElem = 6
 x = -37
 
-[State 810, holdfwd - Turn Target 6] ;If was holding fwd before, turn target too
+; turn the target too, if it was holding forward
+[State 810, holdfwd - Turn Target 6]
 type = TargetFacing
 trigger1 = var(2)
 trigger1 = AnimElem = 6
 value = -1
 
+; this is when the character releases the target
 [State 810, Bind 6]
 type = TargetBind
 trigger1 = AnimElemTime(6) >= 0 && AnimElemTime(7) < 0
-pos = 41, -60
+pos = 41, -30 ; default: 41, -60
 
 [State 810, Bind 7]
 type = TargetBind
 trigger1 = AnimElemTime(7) >= 0 && AnimElemTime(8) < 0
-pos = 25, -75
+pos = 25, -30 ; default: 25, -75
 
 [State 810, Bind 8]
 type = TargetBind
 trigger1 = AnimElemTime(8) >= 0 && AnimElemTime(9) < 0
-pos = 15, -90
+pos = 15, -30 ; default: 15, -90
 
+; maybe this one?
 [State 810, Bind 9]
 type = TargetBind
 trigger1 = AnimElemTime(9) >= 0 && AnimElemTime(10) < 0
-pos = -5, -96
+pos = -5, -30 ; default: -5, -96
 
 [State 810, Bind 10]
 type = TargetBind
