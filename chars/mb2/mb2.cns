@@ -22,7 +22,7 @@ guard.sparkno = 40
 ;1 to enable echo on KO
 KO.echo = 0
 ;Volume offset (negative for softer)
-volume = 0
+;volume = 0
 ;Variables with this index and above will not have their values
 ;reset to 0 between rounds or matches. There are 60 int variables,
 ;indexed from 0 to 59, and 40 float variables, indexed from 0 to 39.
@@ -195,9 +195,9 @@ var(59) = 120 ; Adjust this value to set the duration of the balloon display (in
 [State 181, EndBalloonIntro] ; State to remove the balloon
 type = RemoveExplod
 trigger1 = var(59) <= 0
-value = 1 ; Remove the balloon with ID 1
+;value = 1 ; Remove the balloon with ID 1
 trigger1 = 1
-var(59) = 0 ; Reset var(59) when removing the balloon
+;var(59) = 0 ; Reset var(59) when removing the balloon
 
 ;---------------------------------------------------------------------------
 ;Introduction
@@ -309,9 +309,9 @@ var(59) = 120 ; Adjust this value to set the duration of the balloon display (in
 [State 181, EndBalloonIntro] ; State to remove the balloon
 type = RemoveExplod
 trigger1 = var(59) <= 0
-value = 1 ; Remove the balloon with ID 1
+;value = 1 ; Remove the balloon with ID 1
 trigger1 = 1
-var(59) = 0 ; Reset var(59) when removing the balloon
+;var(59) = 0 ; Reset var(59) when removing the balloon
 
 
 ;---------------------------------------------------------------------------
@@ -1213,7 +1213,7 @@ value = 2000, 0
 
 [State 2000,h]
 type = Helper
-helpertype = normal
+;helpertype = normal
 trigger1 = AnimElem = 1
 name = "Fireball"
 id = 2000
@@ -1288,7 +1288,7 @@ ground.hittime  = 15
 ground.velocity = -5
 air.velocity = -5,-2
 ground.cornerpush.veloff = 0
-sprpriority = 3
+;sprpriority = 3
 
 [State 9200, 9]
 type = DestroySelf
@@ -1355,18 +1355,18 @@ type = PosSet
 trigger1 = Time = 0
 y = 0
 
-[State 11106, 3]
-type = MakeDust
-trigger1 = Time = 2
-pos = 0, 0
-spacing = 1
+;[State 11106, 3]
+;type = MakeDust
+;trigger1 = Time = 2
+;pos = 0, 0
+;spacing = 1
 
-[State 11106, 4]
+[State 11106, 3]
 type = VelSet
 trigger1 = abs(vel x) < Const(movement.stand.friction.threshold)
 x = 0
 
-[State 11106, 5]
+[State 11106, 4]
 type = ChangeState
 trigger1 = Time = 7
 value = 0

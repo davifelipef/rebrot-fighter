@@ -13,8 +13,8 @@
 ;
 ;=============================================================
 [Info]
-name 		= "REBROTown"
-displayname 	= "REBROTown"
+name 		= "Academia Max"
+displayname 	= "Academia Max"
 versiondate 	= 
 mugenversion 	= 1.0
 author 		= "Davi Felipe F. L. Rodrigues"
@@ -55,7 +55,7 @@ screenleft 	= 30
 screenright 	= 30
 
 [StageInfo]
-zoffset 	= 442.0
+zoffset 	= 444.0
 autoturn 	= 1
 resetBG 	= 0
 localcoord 	= 640, 480
@@ -71,13 +71,17 @@ botscale 	= 1.2
 [Shadow]
 color 		= 0,0,0
 yscale 		= .2
+intensity 	= 0
+
+[Reflection]
+intensity 	= 90
 
 [Music]
 bgmusic 	= 
 bgvolume 	= 255
 
 [BGdef]
-spr 		= stages/rebrotown.sff
+spr 		= stages/academiamax.sff
 debugbg 	= 0
 
 [BG image]

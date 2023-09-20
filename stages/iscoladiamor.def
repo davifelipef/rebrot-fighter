@@ -13,8 +13,8 @@
 ;
 ;=============================================================
 [Info]
-name 		= "REBROTown"
-displayname 	= "REBROTown"
+name 		= "Iscola di Amor"
+displayname 	= "Iscola di Amor"
 versiondate 	= 
 mugenversion 	= 1.0
 author 		= "Davi Felipe F. L. Rodrigues"
@@ -55,7 +55,7 @@ screenleft 	= 30
 screenright 	= 30
 
 [StageInfo]
-zoffset 	= 442.0
+zoffset 	= 421.0
 autoturn 	= 1
 resetBG 	= 0
 localcoord 	= 640, 480
@@ -77,7 +77,7 @@ bgmusic 	=
 bgvolume 	= 255
 
 [BGdef]
-spr 		= stages/rebrotown.sff
+spr 		= stages/iscoladiamor.sff
 debugbg 	= 0
 
 [BG image]
