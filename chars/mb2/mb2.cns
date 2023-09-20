@@ -1051,7 +1051,7 @@ trigger1 = AnimElem = 6
 type = PosAdd
 trigger1 = var(2)
 trigger1 = AnimElem = 6
-x = -37
+x = -37 ; default: -37
 
 ; turn the target too, if it was holding forward
 [State 810, holdfwd - Turn Target 6]
@@ -1064,33 +1064,33 @@ value = -1
 [State 810, Bind 6]
 type = TargetBind
 trigger1 = AnimElemTime(6) >= 0 && AnimElemTime(7) < 0
-pos = 41, -30 ; default: 41, -60
+pos = 41, -20 ; default: 41, -60
 
 [State 810, Bind 7]
 type = TargetBind
 trigger1 = AnimElemTime(7) >= 0 && AnimElemTime(8) < 0
-pos = 25, -30 ; default: 25, -75
+pos = 25, -20 ; default: 25, -75
 
 [State 810, Bind 8]
 type = TargetBind
 trigger1 = AnimElemTime(8) >= 0 && AnimElemTime(9) < 0
-pos = 15, -30 ; default: 15, -90
+pos = 15, -20 ; default: 15, -90
 
-; maybe this one?
 [State 810, Bind 9]
 type = TargetBind
 trigger1 = AnimElemTime(9) >= 0 && AnimElemTime(10) < 0
-pos = -5, -30 ; default: -5, -96
+pos = -5, -20 ; default: -5, -96
 
 [State 810, Bind 10]
 type = TargetBind
 trigger1 = AnimElemTime(10) >= 0 && AnimElemTime(11) < 0
-pos = -14, -90
+pos = -14, -20 ; default: -14, -90
 
+; the y in this pos determines the maximum height the character is thrown
 [State 810, Bind 11]
 type = TargetBind
 trigger1 = AnimElem = 11
-pos = -50, -50
+pos = 4, -4 ; default: -50, -50
 
 [State 810, Hurt 11]
 type = TargetLifeAdd
