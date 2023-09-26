@@ -315,7 +315,7 @@ trigger1 = 1
 
 
 ;---------------------------------------------------------------------------
-; Stand Light Punch
+; Standing Light Punch
 ; CNS difficulty: easy
 [Statedef 200]
 type    = S                      ;State-type: S-stand, C-crouch, A-air, L-liedown
@@ -383,7 +383,7 @@ trigger2 = stateno = 200 && movecontact
 value = 230
 
 ;---------------------------------------------------------------------------
-; Stand Heavy Punch
+; Standing Strong Punch
 [Statedef 210]
 type    = S                      ;State-type: S-stand, C-crouch, A-air, L-liedown
 movetype= A                      ;Move-type: A-attack, I-idle, H-gethit
@@ -434,8 +434,7 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-; Standing Medium Punch
-; former standing light kick
+; Standing Light Kick
 ; CNS difficulty: easy
 [Statedef 230]
 type    = S
@@ -457,12 +456,12 @@ value = 0, 1
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-animtype  = Medium
-damage    = 26
+animtype  = Light
+damage    = 23
 guardflag = MA
-pausetime = 12,12
+pausetime = 2,10
 sparkno = 0
-sparkxy = -10,-30
+sparkxy = -10,-10
 hitsound   = 5,1
 guardsound = 6,0
 ground.type = Low
@@ -486,7 +485,7 @@ trigger2 = stateno = 230 && movecontact
 value = 210
 
 ;---------------------------------------------------------------------------
-; Standing strong kick
+; Standing Strong kick
 ; CNS difficulty: easy
 [Statedef 240]
 type    = S
@@ -667,7 +666,7 @@ value = 11
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-;Crouching Medium Punch
+;Crouching Light Kick
 ; CNS difficulty: easy
 [Statedef 430]
 type    = C
@@ -689,12 +688,12 @@ type = HitDef
 trigger1 = Time = 0
 attr = C, NA
 damage    = 28
-animtype  = Medium
+animtype  = Light
 hitflag = MAFD
 guardflag = L
-pausetime = 12,12
+pausetime = 2,10
 sparkno = 0
-sparkxy = -10,-20
+sparkxy = -10,-10
 hitsound   = 5,1
 guardsound = 6,0
 ground.type = Low
@@ -1090,7 +1089,7 @@ pos = -14, -20 ; default: -14, -90
 [State 810, Bind 11]
 type = TargetBind
 trigger1 = AnimElem = 11
-pos = 4, -4 ; default: -50, -50
+pos = -4, 4 ; default: -50, -50
 
 [State 810, Hurt 11]
 type = TargetLifeAdd
@@ -1194,7 +1193,7 @@ value = 5100 ;Hit ground
 ;---------------------------------------------------------------------------
 
 ;---------------------------------------------------------------------------
-; Hadoken 
+; Kouken
 [Statedef 2000]
 type    = S
 movetype= A
@@ -1213,13 +1212,12 @@ value = 2000, 0
 
 [State 2000,h]
 type = Helper
-;helpertype = normal
-trigger1 = AnimElem = 1
+trigger1 = AnimElem = 2 ; default: 1
 name = "Fireball"
 id = 2000
 stateno = 9200
 postype = p1
-pos = 40,-18
+pos = 30,-18
 keyctrl = 0
 ownpal = 1
 persistent = 0
@@ -1231,7 +1229,7 @@ value = 0
 ctrl = 1
 
 ;-------------------------------------------------------------------------------------
-; Hadoken Helper  
+; Kouken Helper  
 [Statedef 9200]
 type    = S
 movetype= A
@@ -1296,7 +1294,7 @@ trigger1 = FrontEdgeDist <= -70
 trigger2 = BackEdgeDist <= -70
 
 ;---------------------------------------------------------------------------
-; Hadoken end
+; Kouken end
 [Statedef 9201]
 type    = S
 movetype= A

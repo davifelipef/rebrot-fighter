@@ -21,7 +21,7 @@ stcommon = common1.cns      ;Common states (from data/ or motif)
 sprite  = lex.sff           ;Sprite
 anim    = lex.air           ;Animation
 sound   = lex.snd           ;Sound
-ai      = lex.ai            ;AI hints data (not used)
+;ai      = lex.ai            ;AI hints data (not used)
 
 ; Maps character selection buttons to palette numbers.
 [Palette Keymap]

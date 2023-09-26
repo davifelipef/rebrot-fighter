@@ -21,7 +21,7 @@ stcommon = common1.cns      ;Common states (from data/ or motif)
 sprite  = gil.sff           ;Sprite
 anim    = gil.air           ;Animation
 sound   = gil.snd           ;Sound
-ai      = gil.ai            ;AI hints data (not used)
+;ai      = gil.ai            ;AI hints data (not used)
 
 ; Maps character selection buttons to palette numbers.
 [Palette Keymap]
