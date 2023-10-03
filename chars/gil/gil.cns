@@ -398,7 +398,7 @@ sprpriority = 2                  ;Set p1's sprite layering priority to 2 (in fro
 
 [State 210, 1]
 type = HitDef
-trigger1 = AnimElem = 2	   ;2 means the frame that have the hit box
+trigger1 = AnimElem = 3	   ;2 means the frame that have the hit box
 attr = S, NA                     ;Attribute: Standing, Normal Attack
 damage = 23, 0                   ;Damage that move inflicts, guard damage
 animtype = Heavy                 ;Animation type: Light, Medium, Heavy, Back (def: Light)
@@ -406,16 +406,16 @@ guardflag = MA                   ;Flags on how move is to be guarded against
 hitflag = MAF                    ;Flags of conditions that move can hit
 priority = 3, Hit                ;Attack priority: 0 (least) to 7 (most), 4 default
 ;Hit/Miss/Dodge type (Def: Hit)
-pausetime = 8, 8                 ;Time attacker pauses, time opponent shakes
+pausetime = 2, 10                 ;Time attacker pauses, time opponent shakes
 sparkno = 0                      ;Spark anim no (Def: set above)
 sparkxy = -10, -36               ;X-offset for the "hit spark" rel. to p2. Default: -10, -76
 ;Y-offset for the spark rel. to p1
 hitsound = 5, 0                  ;Sound to play on hit
 guardsound = 6, 0                ;Sound to play on guard
-ground.type = High               ;Type: High, Low, Trip (def: Normal)
+ground.type = Trip               ;Type: High, Low, Trip (def: Normal)
 ground.slidetime = 4             ;Time that the opponent slides back
 ground.hittime  = 11             ;Time opponent is in hit state
-ground.velocity = -7             ;Velocity at which opponent is pushed
+ground.velocity = -1,-4             ;Velocity at which opponent is pushed
 airguard.velocity = -1.9,-.8     ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
 air.type = High                  ;Type: High, Low, Trip (def: same as ground.type)
 air.velocity = -1.4,-3           ;X-velocity at which opponent is pushed,
