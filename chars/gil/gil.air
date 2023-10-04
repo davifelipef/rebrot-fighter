@@ -35,7 +35,7 @@ Clsn2: 1
 [Begin Action 10]
 Clsn2: 1
   Clsn2[0] = -7, -35, 13, -1
-20,3, 0,0, 2
+11,0, 0,0, 7
 Clsn2: 1
   Clsn2[0] = -6, -28, 15, -2
 11,1, 0,0, 2
@@ -53,7 +53,7 @@ Clsn2: 1
 11,1, 0,0, 2
 Clsn2: 1
   Clsn2[0] = -9, -34, 13, -2
-20,3, 0,0, 2
+11,0, 0,0, 7
 
 ; Walking Forward
 [Begin Action 20]
@@ -78,7 +78,7 @@ Clsn2Default: 1
 [Begin Action 40]
 Clsn2: 1
   Clsn2[0] = -13, -38, 17, 0
-0,3, 0,0, 3
+11,0, 0,0, 7
 
 ; Starting Jumping up
 [Begin Action 41]
@@ -153,7 +153,7 @@ Clsn2: 1
 [Begin Action 47]
 Clsn2: 1
   Clsn2[0] = -9, -33, 14, 0
-0,3, 0,0, 2
+11,0, 0,0, 2
 Clsn2: 1
   Clsn2[0] = -7, -28, 16, 0
 10,1, 0,0, 4
@@ -177,7 +177,7 @@ Clsn2: 1
 [Begin Action 105]
 Clsn2: 1
   Clsn2[0] = -13, -46, 17, 0
-105,0, 0,0, -1
+105,0, 0,0, 5
 
 ;--------------------
 ; GUARDSTART (stand)

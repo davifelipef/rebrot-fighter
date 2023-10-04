@@ -73,12 +73,13 @@
 ;kfm, stages/kfm.def
 ;kfm720, stages/kfm.def
 ryuu, stages/dark_forest.def
-mb2, stages/nersograd.def
-cel, stages/nersograd.def
-and, stages/nersograd.def
-bru, stages/nersograd.def
-liv, stages/nersograd.def
-lex, stages/nersograd.def
+mb2, stages/rebrotown.def
+cel, stages/rebrotown.deff
+and, stages/rebrotown.def
+bru, stages/rebrotown.def
+liv, stages/rebrcity.def
+lex, stages/rebrotown.def
+gil, stages/rebrotown.def
 ;bboss, stages/kfm.def 
 
 ;-----------------------
