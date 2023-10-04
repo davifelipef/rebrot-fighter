@@ -434,8 +434,7 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-; Standing Medium Punch
-; former standing light kick
+; Standing light kick
 ; CNS difficulty: easy
 [Statedef 230]
 type    = S
@@ -444,7 +443,7 @@ physics = S
 juggle  = 4
 poweradd= 11
 ctrl = 0
-velset = 0,0
+velset = 3,0
 anim = 230
 sprpriority = 2
 
@@ -457,10 +456,10 @@ value = 0, 1
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-animtype  = Medium
+animtype  = Light
 damage    = 26
 guardflag = MA
-pausetime = 12,12
+pausetime = 2,10
 sparkno = 0
 sparkxy = -10,-30
 hitsound   = 5,1
