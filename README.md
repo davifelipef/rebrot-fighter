@@ -1,4 +1,7 @@
-![REBROT Fighter logo.](https://raw.githubusercontent.com/davifelipef/rebrot-fighter/resources/images/_da9dd043-9fea-4dc9-80d7-e70aece3da85-transformed.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/davifelipef/rebrot-fighter/resources/images/rebrot_fighter.png" alt="REBROT Fighter logo.">
+</p>
+
 # REBROT Fighter
 A repository to control the development of characters and stages made to run in the Mugen 1.0 game named REBROT Fighter.
 
