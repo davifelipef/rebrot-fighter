@@ -1,9 +1,9 @@
-; Definition file for Johnathan
+; Definition file for Jonathan
 ; Contains all the filenames needed for the character
 
 ; Player information
 [Info]
-name = "Johnathan"        ;Name of character
+name = "Jonathan"        ;Name of character
 displayname = "Jonathan" ;Name of character to display
 versiondate = 05,10,2023        ;Version date of character (MM-DD-YYYY or X.XX)
 mugenversion = 1.0              ;Version of M.U.G.E.N character works on (X.XX)
