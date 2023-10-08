@@ -416,7 +416,7 @@ priority = 3, Hit                ;Attack priority: 0 (least) to 7 (most), 4 defa
 ;Hit/Miss/Dodge type (Def: Hit)
 pausetime = 8, 8                 ;Time attacker pauses, time opponent shakes
 sparkno = 0                      ;Spark anim no (Def: set above)
-sparkxy = -10, -36               ;X-offset for the "hit spark" rel. to p2. Default: -10, -76
+sparkxy = -10, -26               ;X-offset for the "hit spark" rel. to p2. Default: -10, -76
 ;Y-offset for the spark rel. to p1
 hitsound = 5, 0                  ;Sound to play on hit
 guardsound = 6, 0                ;Sound to play on guard
