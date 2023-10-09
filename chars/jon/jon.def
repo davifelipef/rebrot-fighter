@@ -14,14 +14,14 @@ pal.defaults = 1,2        ;Default palettes in order of preference (up to 4)
 
 ; Files for the player
 [Files]
-cmd     = john.cmd           ;Command set
-cns     = john.cns           ;Constants
-st      = john.cns           ;States
+cmd     = jon.cmd           ;Command set
+cns     = jon.cns           ;Constants
+st      = jon.cns           ;States
 stcommon = common1.cns      ;Common states (from data/ or motif)
-sprite  = john.sff           ;Sprite
-anim    = john.air           ;Animation
-sound   = john.snd           ;Sound
-;ai      = john.ai            ;AI hints data (not used)
+sprite  = jon.sff           ;Sprite
+anim    = jon.air           ;Animation
+sound   = jon.snd           ;Sound
+;ai      = jon.ai            ;AI hints data (not used)
 
 ; Maps character selection buttons to palette numbers.
 [Palette Keymap]
