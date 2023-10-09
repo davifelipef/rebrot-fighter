@@ -392,10 +392,16 @@ time = 1
 
 ;-| Special Motions |------------------------------------------------------
 
+;Hadouken air
+[Command]
+name = "Tenma"
+command = ~D, DF, F, ~x
+time = 15
+
 ;Hadoken
 [Command]
 name = "QCF_x"
-command = ~D, DF, F, x
+command = ~D, DF, F, ~x
 time = 12
 
 ;-| Double Tap |-----------------------------------------------------------
@@ -898,5 +904,19 @@ trigger1 = statetype !=A
 ;triggerall = Cond(!NumHelper(2000), 1, (Helper(2000),StateNo = 9201))
 triggerall = !NumHelper(2000)
 
+
+;---------------------------------------------------------------------------
+; Zankuu Hadouken
+[State -1, Zankuu Hadouken]
+type = ChangeState
+value = 1020
+triggerall = command = "Tenma"
+triggerall = NumProj = 0
+trigger1 = statetype = A
+;trigger1 = ctrl = 1
+;trigger2 = StateNo = 610
+;trigger2 = MoveContact
+;trigger3 = StateNo = 630
+;trigger3 = MoveContact
 
 ;---------------------------------------------------------------------------

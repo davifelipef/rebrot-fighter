@@ -1204,6 +1204,107 @@ value = 5100 ;Hit ground
 ; Special Moves
 ;---------------------------------------------------------------------------
 
+;---------------------------------------
+; Zankuu Hadouken
+;---------------------------------------
+[Statedef 1020]
+type    = A
+movetype= A
+physics = A
+poweradd = 80
+juggle = 0
+ctrl = 0
+anim = 1021 ; air Hadouken animation
+
+[State 1020, 2]
+type = PlaySnd
+trigger1 = AnimElem = 1 
+value = 2,0
+
+[State 1020, 2]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 2,1
+
+[State 1004, 1]
+type = VelSet
+trigger1 = Time = 0
+trigger1 = Vel x > 0
+x = .5
+
+[State 1004, 2]
+type = VelSet
+trigger1 = Time = 0
+trigger1 = Vel x < 0
+x = -.5
+
+[State 1004, 3]
+type = VelSet
+trigger1 = Time = 0
+trigger1 = Vel y > 0
+y = .5
+
+[State 1004, 4]
+type = VelSet
+trigger1 = Time = 0
+trigger1 = Vel y < 0
+y = -.5
+
+[State 1004, 4]
+type = VelSet
+trigger1 = Pos y > -5
+y = 0
+
+[State 1020, 2]
+type = Projectile
+trigger1 = AnimElem = 1
+projanim = 1153
+projhitanim = 2005
+projpriority = 1
+;projshadow = -1 
+projheightbound = -480,50 ;default values: -240,50
+offset = -20,37 ;default: -40,29
+Velocity = 2.2,2
+attr = S, SP
+damage   = 45
+animtype = heavy
+guardflag = MA
+hitflag = MAF
+pausetime = 0,10
+hitsound   = S20,2
+guardsound = S20,6
+sparkno = S8070+(random%2)
+guard.sparkno = s8050
+sparkxy =  75,-40
+ground.type = High
+ground.slidetime = 15
+ground.hittime  = 15
+ground.Velocity = -3
+air.animtype = Back
+air.Velocity = -4,4
+air.juggle = 3
+air.fall = 1
+down.Velocity = 0,0
+down.hittime = 30
+down.bounce = 0
+
+[State 1020, 2]
+type = PlaySnd
+trigger1 = AnimElem = 3,-1
+value = 1,1
+
+[State 1020, 2]
+type = PlaySnd
+trigger1 = AnimElem = 3,-1
+value = 2,1
+
+
+[State 1020, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 50
+CTRL = 0
+
 ;---------------------------------------------------------------------------
 ; Hadoken 
 [Statedef 2000]
