@@ -331,7 +331,7 @@ sprpriority = 2                  ;Set p1's sprite layering priority to 2 (in fro
 
 [State 200, 1]
 type = HitDef
-trigger1 = AnimElem = 2	   ;2 means the frame that have the hit box
+trigger1 = AnimElem = 3	   ;2 means the frame that have the hit box
 attr = S, NA                     ;Attribute: Standing, Normal Attack
 damage = 23, 0                   ;Damage that move inflicts, guard damage
 animtype = Light                 ;Animation type: Light, Medium, Heavy, Back (def: Light)
@@ -786,19 +786,19 @@ sprpriority = 2
 
 [State 600, 1]
 type = PlaySnd
-trigger1 = Time = 2
+trigger1 = Time = 1
 value = 0, 0
 
 [State 600, 2]
 type = HitDef
-trigger1 = Time = 2
+trigger1 = Time = 1
 attr = A, NA
 damage    = 20
 guardflag = HA
 priority = 3
 pausetime = 7,8
 sparkno = 0
-sparkxy = -10,-28
+sparkxy = -10,-26
 hitsound   = 5,0
 guardsound = 6,0
 ground.type = High
