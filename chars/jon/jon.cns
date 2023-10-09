@@ -1221,10 +1221,10 @@ type = PlaySnd
 trigger1 = AnimElem = 1 
 value = 2,0
 
-[State 1020, 2]
-type = PlaySnd
-trigger1 = AnimElem = 1
-value = 2,1
+;[State 1020, 2]
+;type = PlaySnd
+;trigger1 = AnimElem = 1
+;value = 2,1
 
 [State 1004, 1]
 type = VelSet
@@ -1271,8 +1271,10 @@ animtype = heavy
 guardflag = MA
 hitflag = MAF
 pausetime = 0,10
-hitsound   = S20,2
-guardsound = S20,6
+;hitsound   = S20,2
+;guardsound = S20,6
+hitsound   = S1,2
+guardsound = S4,0
 sparkno = S8070+(random%2)
 guard.sparkno = s8050
 sparkxy =  75,-40
@@ -1321,7 +1323,7 @@ sprpriority = 2
 [State 2000,1]
 type = PlaySnd
 trigger1 = AnimElem = 1 
-value = 2000, 0
+value = 2, 0
 
 [State 2000,h]
 type = Helper
