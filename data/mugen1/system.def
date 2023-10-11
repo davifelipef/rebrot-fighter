@@ -114,10 +114,17 @@ menu.item.spacing = 0, 54
 ; Use "" to disable an item. If all are disabled, goes straight to demo mode
 ; (hold Esc to quit demos).
 menu.itemname.arcade = "ARCADE"
+<<<<<<< HEAD
 menu.itemname.versus = "VERSUS"
 menu.itemname.teamarcade = "ARCADE COM EQUIPE"
 menu.itemname.teamversus = "VERSUS COM EQUIPE"
 menu.itemname.teamcoop = "CO-OP"
+=======
+menu.itemname.versus = "MODO VERSUS"
+menu.itemname.teamarcade = "ARCADE EM EQUIPE"
+menu.itemname.teamversus = "VERSUS EM EQUIPE"
+menu.itemname.teamcoop = "EQUIPE CO-OP"
+>>>>>>> 4e064957ac21705dc9606b7722d76d7b3ba93d6a
 menu.itemname.survival = "SOBREVIVENCIA"
 menu.itemname.survivalcoop = "SOBREVIVENCIA CO-OP"
 menu.itemname.training = "TREINAMENTO"

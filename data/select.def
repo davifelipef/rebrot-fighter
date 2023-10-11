@@ -72,6 +72,7 @@
 
 ;kfm, stages/kfm.def
 ;kfm720, stages/kfm.def
+bboss, stages/rebrotown.def 
 ryuu, stages/dark_forest.def
 mb2, stages/rebrotown.def
 cel, stages/rebrotown.deff
@@ -82,9 +83,15 @@ lex, stages/rebrotown.def
 gil, stages/rebrotown.def
 jon, stages/rebrotown.def
 alisson, stages/iscoladiamor.def
+<<<<<<< HEAD
 ska, stages/rebrotown.def
 scpvf, stages/rebrotown.def
 ;bboss, stages/kfm.def 
+=======
+;ska, stages/rebrotown.def
+;scpvf, stages/rebrotown.def
+
+>>>>>>> 4e064957ac21705dc9606b7722d76d7b3ba93d6a
 
 ;-----------------------
 [ExtraStages]
