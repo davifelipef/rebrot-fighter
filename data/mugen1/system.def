@@ -114,16 +114,16 @@ menu.item.spacing = 0, 54
 ; Use "" to disable an item. If all are disabled, goes straight to demo mode
 ; (hold Esc to quit demos).
 menu.itemname.arcade = "ARCADE"
-menu.itemname.versus = "VS MODE"
-menu.itemname.teamarcade = "TEAM ARCADE"
-menu.itemname.teamversus = "TEAM VS"
-menu.itemname.teamcoop = "TEAM CO-OP"
-menu.itemname.survival = "SURVIVAL"
-menu.itemname.survivalcoop = "SURVIVAL CO-OP"
-menu.itemname.training = "TRAINING"
-menu.itemname.watch = "WATCH"
-menu.itemname.options = "OPTIONS"
-menu.itemname.exit = "EXIT"
+menu.itemname.versus = "VERSUS"
+menu.itemname.teamarcade = "ARCADE COM EQUIPE"
+menu.itemname.teamversus = "VERSUS COM EQUIPE"
+menu.itemname.teamcoop = "CO-OP"
+menu.itemname.survival = "SOBREVIVENCIA"
+menu.itemname.survivalcoop = "SOBREVIVENCIA CO-OP"
+menu.itemname.training = "TREINAMENTO"
+menu.itemname.watch = "ASSISTIR"
+menu.itemname.options = "OPCOES"
+menu.itemname.exit = "SAIR"
 ; These parameters define the window in which the items are visible
 ; in.
 menu.window.margins.y = 40, 34
@@ -227,10 +227,10 @@ _
 fadein.time = 10
 fadeout.time = 10
 rows = 4
-columns = 3
+columns = 4
 wrapping = 0              ;1 to let cursor wrap around
 pos = 480,128             ;Position to draw to
-showemptyboxes = 1        ;1 to show empty boxes
+showemptyboxes = 0        ;1 to show empty boxes
 moveoveremptyboxes = 1    ;1 to allow cursor to move over empty boxes
 cell.size = 100,100       ;x,y size of each cell (in pixels)
 cell.spacing = 10         ;Space between each cell
