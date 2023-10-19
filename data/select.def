@@ -72,9 +72,8 @@
 
 ;kfm, stages/kfm.def
 ;kfm720, stages/kfm.def
-bboss, stages/rebrotown.def 
-ryuu, stages/dark_forest.def
 mb2, stages/rebrotown.def
+ryuu, stages/dark_forest.def
 cel, stages/rebrotown.deff
 and, stages/rebrotown.def
 bru, stages/rebrotown.def
@@ -83,6 +82,7 @@ lex, stages/rebrotown.def
 gil, stages/rebrotown.def
 jon, stages/rebrotown.def
 alisson, stages/iscoladiamor.def
+bboss, stages/rebrotown.def 
 lucian, stages/rebrotown.def
 lucas, stages/rebrotown.def
 gus, stages/rebrotown.def
