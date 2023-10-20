@@ -233,8 +233,8 @@ _
 [Select Info]
 fadein.time = 10
 fadeout.time = 10
-rows = 4
-columns = 4
+rows = 5
+columns = 5
 wrapping = 0              ;1 to let cursor wrap around
 pos = 480,128             ;Position to draw to
 showemptyboxes = 0        ;1 to show empty boxes
