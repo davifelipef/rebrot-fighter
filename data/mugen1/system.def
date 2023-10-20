@@ -236,11 +236,12 @@ fadeout.time = 10
 rows = 5
 columns = 5
 wrapping = 0              ;1 to let cursor wrap around
-pos = 480,128             ;Position to draw to
+pos = 380,100             ;Position to draw to. default: 480,128
 showemptyboxes = 0        ;1 to show empty boxes
-moveoveremptyboxes = 1    ;1 to allow cursor to move over empty boxes
-cell.size = 100,100       ;x,y size of each cell (in pixels)
+moveoveremptyboxes = 0    ;1 to allow cursor to move over empty boxes
+cell.size = 100,100       ;x,y size of each cell (in pixels) default: 100,100
 cell.spacing = 10         ;Space between each cell
+
 cell.bg.spr = 150,0       ;Note: Don't use animation for cells
 cell.random.spr = 151,0   ;Icon for random select (don't use animation)
 cell.random.switchtime = 4;Time to wait before changing to another random portrait
@@ -263,7 +264,7 @@ stage.done.snd = 100,1
 cancel.snd = 100,2
 portrait.spr = 9000,0     ;Do not change from 9000,0
 portrait.offset = 0,0
-portrait.scale = 1,1
+portrait.scale = 1,1 
 title.offset = 640,38     ;Position of title (Arcade Mode, etc)
 title.font = 4,0,0        ;Font of title (-1 for none)
 ;Big portraits
@@ -278,7 +279,7 @@ p2.face.scale = 1,1
 p2.face.facing = -1
 p2.face.window = 540,0, 1279,959
 ;Name
-p1.name.offset = 50,620   ;Position to put name
+p1.name.offset = 50,85   ;Position to put name. Default: 50,620
 p1.name.font = 3,3,1      ;Set to -1 for no display
 p1.name.spacing = 15,25   ;Space between each name for players on the same team
 p2.name.offset = 1230,620
