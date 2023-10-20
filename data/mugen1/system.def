@@ -233,7 +233,7 @@ _
 [Select Info]
 fadein.time = 10
 fadeout.time = 10
-rows = 4
+rows = 8
 columns = 4
 wrapping = 0              ;1 to let cursor wrap around
 pos = 480,128             ;Position to draw to
