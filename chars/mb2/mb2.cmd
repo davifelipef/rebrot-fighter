@@ -395,7 +395,7 @@ time = 1
 ;Hadoken
 [Command]
 name = "QCF_x"
-command = ~D, DF, F, x
+command = ~D, F, ~x ;default: ~D, DF, F, ~x
 time = 12
 
 ;-| Double Tap |-----------------------------------------------------------

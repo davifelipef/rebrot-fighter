@@ -509,7 +509,7 @@ sprpriority = 2
 
 [State 240, 1]
 type = PlaySnd
-trigger1 = Time = 3
+trigger1 = Time = 2
 value = 0, 1
 
 [State 240, 2]
@@ -1210,7 +1210,7 @@ value = 5100 ;Hit ground
 type    = S
 movetype= A
 physics = S
-juggle  = 4
+juggle  = 10
 poweradd= 120
 velset = 0,0
 anim = 2000
@@ -1293,7 +1293,7 @@ hitsound   = S1,2
 guardsound = S4,0
 sparkno = S7204
 guard.sparkno = S7300
-ground.type = High ;default: High
+ground.type = Trip ;default: High
 ground.slidetime = 4
 ground.hittime  = 20
 ground.velocity = -5

@@ -234,8 +234,8 @@ _
 fadein.time = 10
 fadeout.time = 10
 rows = 8
-columns = 4
-wrapping = 0              ;1 to let cursor wrap around
+columns = 5
+wrapping = 1              ;1 to let cursor wrap around
 pos = 380,100             ;Position to draw to. default: 480,128
 showemptyboxes = 0        ;1 to show empty boxes
 moveoveremptyboxes = 0    ;1 to allow cursor to move over empty boxes
@@ -264,13 +264,13 @@ stage.done.snd = 100,1
 cancel.snd = 100,2
 portrait.spr = 9000,0     ;Do not change from 9000,0
 portrait.offset = 0,0
-portrait.scale = 1,1 
+portrait.scale = 1,1      ;Default: 1,1 
 title.offset = 640,38     ;Position of title (Arcade Mode, etc)
 title.font = 4,0,0        ;Font of title (-1 for none)
 ;Big portraits
 p1.face.spr = 9000,1      ;Do not change from 9000,1
 p1.face.offset = 0,0      ;Position to put big portrait
-p1.face.scale = 1,1
+p1.face.scale = 1,1       ;Cannot go below 1,1
 p1.face.facing = 1
 p1.face.window = 0,0, 739,959
 p2.face.spr = 9000,1
@@ -280,10 +280,10 @@ p2.face.facing = -1
 p2.face.window = 540,0, 1279,959
 ;Name
 p1.name.offset = 50,85   ;Position to put name. Default: 50,620
-p1.name.font = 3,3,1      ;Set to -1 for no display
+p1.name.font = 2,3,1      ;Set to -1 for no display. Default: 3,3,1
 p1.name.spacing = 15,25   ;Space between each name for players on the same team
-p2.name.offset = 1230,620
-p2.name.font = 3,1,-1
+p2.name.offset = 1230,85 ;Default: 1230,620
+p2.name.font = 2,1,-1
 p2.name.spacing = -15,25
 ;Stage select
 stage.pos = 640,700
