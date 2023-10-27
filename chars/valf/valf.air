@@ -570,122 +570,122 @@ Clsn2: 1
 ; Stand/Air Hit high (light)
 [Begin Action 5000]
 Clsn2: 1
-  Clsn2[0] = -14, -33, 3, -3
-5010,0, 0,0, 4
+  Clsn2[0] = -9, -33, 8, -3
+0,0, 0,0, 4
 
 ;Stand/Air Hit high (medium)
 [Begin Action 5001]
 Clsn2: 1
-  Clsn2[0] = -14, -33, 3, -3
-5010,0, 0,0, 4
+  Clsn2[0] = -10, -33, 7, -3
+0,0, 0,0, 4
 
 ;Stand/Air Hit high (hard)
 [Begin Action 5002]
 Clsn2: 1
-  Clsn2[0] = -14, -33, 3, -3
-5010,0, 0,0, 4
+  Clsn2[0] = -10, -33, 7, -3
+0,0, 0,0, 4
 
 ;---------------------------
 ;Stand Recover high (light)
 [Begin Action 5005]
 Clsn2: 1
-  Clsn2[0] = -12, -38, 16, 2
+  Clsn2[0] = -10, -35, 7, -2
 0,0, 0,0, 3
 
 ;Stand Recover high (medium)
 [Begin Action 5006]
 Clsn2: 1
-  Clsn2[0] = -13, -38, 16, 0
+  Clsn2[0] = -12, -36, 9, -3
 0,0, 0,0, 3
 
 ;Stand Recover high (hard)
 [Begin Action 5007]
 Clsn2: 1
-  Clsn2[0] = -13, -38, 16, 0
+  Clsn2[0] = -10, -37, 9, -2
 0,0, 0,0, 5
 
 ;---------------------------
 ;Stand/Air Hit low (light)
 [Begin Action 5010]
 Clsn2: 1
-  Clsn2[0] = -14, -33, 3, -3
-5010,0, 0,0, 4
+  Clsn2[0] = -10, -36, 7, -6
+0,0, 0,0, 4
 
 ;Stand/Air Hit low (medium)
 [Begin Action 5011]
 Clsn2: 1
   Clsn2[0] = -10, -30, 8, -2
-5000,10, 0,0, 5
+0,0, 0,0, 5
 
 ;Stand/Air Hit low (hard)
 [Begin Action 5012]
 Clsn2: 1
-  Clsn2[0] = -14, -33, 3, -3
-5010,0, 0,0, 4
+  Clsn2[0] = -11, -35, 6, -5
+0,0, 0,0, 4
 
 ;---------------------------
 ;Stand Recover low (light)
 [Begin Action 5015]
 Clsn2: 1
-  Clsn2[0] = -13, -39, 16, 0
+  Clsn2[0] = -11, -36, 9, -5
 0,0, 0,0, 1
 
 ;Stand Recover low (medium)
 [Begin Action 5016]
 Clsn2: 1
-  Clsn2[0] = -12, -39, 16, 0
+  Clsn2[0] = -11, -36, 9, -3
 0,0, 0,0, 1
 
 ;Stand Recover low (hard)
 [Begin Action 5017]
 Clsn2: 1
-  Clsn2[0] = -11, -39, 16, 0
+  Clsn2[0] = -11, -36, 9, -4
 0,0, 0,0, 1
 
 ;---------------------------
 ;Crouch Hit (light)
 [Begin Action 5020]
 Clsn2: 1
-  Clsn2[0] = -14, -33, 3, -3
-5010,0, 0,0, 4
+  Clsn2[0] = -11, -35, 6, -5
+0,0, 0,0, 4
 
 ;Crouch Hit (medium)
 [Begin Action 5021]
 Clsn2: 1
-  Clsn2[0] = -14, -33, 3, -3
-5010,0, 0,0, 4
+  Clsn2[0] = -11, -34, 6, -4
+0,0, 0,0, 4
 
 ;Crouch Hit (hard)
 [Begin Action 5022]
 Clsn2: 1
-  Clsn2[0] = -14, -33, 3, -3
-5010,0, 0,0, 4
+  Clsn2[0] = -10, -34, 7, -4
+0,0, 0,0, 4
 
 ;---------------------------
 ;Crouch Recover (light)
 [Begin Action 5025]
 Clsn2Default: 1
-  Clsn2[0] = -8, -31, 18, 0
-11,1, 0,0, 1
+  Clsn2[0] = -11, -33, 8, -4
+0,0, 0,0, 1
 
 ;Crouch Recover (medium)
 [Begin Action 5026]
 Clsn2Default: 1
-  Clsn2[0] = -10, -31, 18, 0
-11,1, 0,0, 3
+  Clsn2[0] = -10, -33, 8, -5
+0,0, 0,0, 3
 
 ;Crouch Recover (hard)
 [Begin Action 5027]
 Clsn2Default: 1
-  Clsn2[0] = -10, -31, 18, 0
-11,1, 0,0, 4
+  Clsn2[0] = -10, -34, 10, -4
+0,0, 0,0, 4
 
 ;---------------------------
 ;Stand/Air Hit back
 [Begin Action 5030]
 Clsn2: 1
   Clsn2[0] = -9, -77, 13, -48
-5010,0, 4,-44, 5
+0,0, 4,-44, 5
 
 ;Stand/Air Hit transition
 [Begin Action 5035]
