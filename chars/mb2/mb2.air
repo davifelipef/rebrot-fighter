@@ -361,7 +361,7 @@ Clsn2: 1
   Clsn2[0] = -17, -38, 18, 0
 230,0, 0,0, 4
 
-; Standing Strong Kick
+; Standing Heavy Kick
 [Begin Action 240]
 Clsn2: 1
   Clsn2[0] = -5, -33, 15, -5
