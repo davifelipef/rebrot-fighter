@@ -791,14 +791,14 @@ value = 0, 0
 
 [State 600, 2]
 type = HitDef
-trigger1 = Time = 2
+trigger1 = Time = 1
 attr = A, NA
 damage    = 20
 guardflag = HA
 priority = 3
 pausetime = 7,8
 sparkno = 0
-sparkxy = -10,-28
+sparkxy = -20,-45
 hitsound   = 5,0
 guardsound = 6,0
 ground.type = High
