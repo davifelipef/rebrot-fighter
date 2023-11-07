@@ -418,13 +418,13 @@ KO.snd     = 2,0            ;Sound to play for KO announcement
 ; Double KO
 DKO.offset = 640, 320
 DKO.font   = 1,5
-DKO.text   = "Double K.O."
+DKO.text   = "Nocaute duplo"
 DKO.displaytime = 60
 DKO.snd    = 2,1
 ; Time Over
 TO.offset  = 640, 320
 TO.font    = 1,5
-TO.text    = "Time Over"
+TO.text    = "Acabou o tempo"
 TO.displaytime = 60
 TO.snd     = 2,2
 KO.sndtime = 0             ;Time to play sound for KO, DKO and TO.
@@ -438,17 +438,17 @@ win.time = 60
 ; Win text
 win.offset = 640, 320
 win.font = 1,0
-win.text = "%s Wins"
+win.text = "%s venceu"
 win.displaytime = 540
 ; 2-player win text
 win2.offset = 640, 320
 win2.font = 1,0
-win2.text = "%s and %s Win"
+win2.text = "%s e %s venceram"
 win2.displaytime = 540
 ; Draw text
 draw.offset = 640, 320
 draw.font = 1,0
-draw.text = "Draw Game"
+draw.text = "Empate"
 draw.displaytime = 540
 
 ;"Fight!" Animation
