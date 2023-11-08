@@ -1193,7 +1193,7 @@ value = 5100 ;Hit ground
 ;---------------------------------------------------------------------------
 
 ;---------------------------------------------------------------------------
-; Hadoken 
+; Command Throw(attempt)
 [Statedef 2000]
 type    = S
 movetype= A
@@ -1209,19 +1209,6 @@ sprpriority = 2
 type = PlaySnd
 trigger1 = AnimElem = 1 
 value = 2000, 0
-
-[State 2000,h]
-type = Helper
-;helpertype = normal
-trigger1 = AnimElem = 1
-name = "Fireball"
-id = 2000
-stateno = 9200
-postype = p1
-pos = 40,-18
-keyctrl = 0
-ownpal = 1
-persistent = 0
 
 [State 2000, 8]
 type = ChangeState
