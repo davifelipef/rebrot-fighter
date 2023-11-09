@@ -892,11 +892,11 @@ trigger1 = ctrl
 ; Hadoken
 [State -1, Hadoken]
 type = ChangeState
-value = 2000
+value = 900
 trigger1 = command = "QCF_x"
 trigger1 = statetype !=A
 ;triggerall = Cond(!NumHelper(2000), 1, (Helper(2000),StateNo = 9201))
-triggerall = !NumHelper(2000)
+;triggerall = !NumHelper(2000)
 
 
 ;---------------------------------------------------------------------------

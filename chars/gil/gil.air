@@ -581,6 +581,82 @@ Clsn2: 1
   Clsn2[0] = -16, -51, 14, -35
 5030,30, 0,0, -1
 
+; Super Argentina BackBreaker Attempt
+[Begin Action 900]
+Clsn1: 1
+  Clsn1[0] = 2, -43, 35, 0
+Clsn2: 1
+  Clsn2[0] = -13, -42, 12, 0
+900,0, 0,0, 1
+Clsn2: 1
+  Clsn2[0] = -14, -39, 13, -2
+900,0, 0,0, 3
+Clsn2: 1
+  Clsn2[0] = -4, -42, 21, 0
+900,1, 0,0, 4
+Clsn2: 1
+  Clsn2[0] = -4, -42, 21, 0
+900,2, 0,0, 13
+Clsn2: 1
+  Clsn2[0] = -10, -42, 15, 0
+210,0, 0,0, 5
+
+; Super Argentina BackBreaker Success
+[Begin Action 901]
+900,0, 0,0, 3
+900,1, 0,0, 11
+900,3, 0,0, 15
+900,3, 0,0, 5
+900,4, 0,0, 5
+900,4, 0,0, 18
+900,5, 0,0, 7
+Clsn1: 1
+  Clsn1[0] = -19, -43, 21, -25
+900,6, 0,0, -1
+
+; Super Argentina BackBreaker - Backbreaking
+[Begin Action 902]
+900,7, 0,0, 8
+900,8, 0,0, 20
+
+; Super Argentina BackBreaker - Throw down
+[Begin Action 903]
+900,9, 0,0, 4
+900,10, 0,0, 4
+900,11, 0,0, 25
+900,9, 0,0, 4
+210,0, 0,0, 4
+
+; Throw by Super Argentina BackBreaker
+[Begin Action 904]
+5000,0, 0,0, 3
+5010,20, 0,0, 11
+5010,20, 0,0, 15
+5011,10, 0,0, 5
+5032,0, 0,0, 5, HV
+LoopStart
+Clsn2: 1
+  Clsn2[0] = -5, -8, 9, 7
+5001,20, 0,0, 2, V
+Clsn2: 1
+  Clsn2[0] = -5, -8, 9, 7
+5011,10, 0,0, 2, HV
+Clsn2: 1
+  Clsn2[0] = -5, -8, 9, 7
+5001,20, 0,0, 2, HV
+Clsn2: 1
+  Clsn2[0] = -5, -8, 9, 7
+5011,10, 0,0, 2, V
+
+; Throw by Super Argentina BackBreaker - being backbreak
+[Begin Action 906]
+5031,30, 0,0, 8, H
+5031,30, 0,0, 20, H
+
+; Throw by Super Argentina BackBreaker - lying down
+[Begin Action 909]
+5040,10, 0,0, 1
+
 ; Command throw (attempt)
 [Begin Action 2000]
 Clsn2: 1
@@ -617,12 +693,15 @@ Clsn2: 1
 
 ; Thrown (action 2000)
 [Begin Action 2002]
-5000,0, 0,0, 10
 5000,0, 0,0, 4
 5010,0, 5,0, 10
-5060,0, 0,0, 10
-5160,0, 0,0, 10
-5060,0, 0,-120, 10, V
+5010,0, 5,0, 10
+5060,0, 0,0, 20
+5160,0, 0,0, 30
+5060,0, 0,-120, 20, V
+5160,0, 0,10, 30, H
+5160,0, 0,11, 10
+5160,0, -8,15, 10
 
 ;---------------------------
 ; Stand/Air Hit high (light)
