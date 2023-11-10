@@ -889,14 +889,13 @@ trigger1 = statetype = A
 trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
-; Hadoken
-[State -1, Hadoken]
+; Super Argentina BackBreaker
+[State -1, Super Argentina BackBreaker]
 type = ChangeState
 value = 900
 trigger1 = command = "QCF_x"
 trigger1 = statetype !=A
-;triggerall = Cond(!NumHelper(2000), 1, (Helper(2000),StateNo = 9201))
-;triggerall = !NumHelper(2000)
+trigger1 = ctrl = 1
 
 
 ;---------------------------------------------------------------------------

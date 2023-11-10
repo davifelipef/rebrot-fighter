@@ -1197,13 +1197,13 @@ value = 5100 ;Hit ground
 ;This use YongMIng's Argentina BackBreaker
 [Statedef 900]
 type    = S
-physics = S
 movetype= A
-anim = 900
-ctrl = 0
-juggle = 15
+physics = S
+juggle  = 0
 velset = 0,0
-facep2 = 1
+ctrl = 0
+anim = 900
+sprpriority = 2
 
 [State 900, 1]
 type = Playsnd
@@ -1212,25 +1212,22 @@ value = 1006, 4
 channel = 0
 
 [State 900, 2]
-type = Hitdef
-trigger1 = animelem = 1
-trigger1 = p2stateno != 150 && 151 && 152 && 153 && 130 && 131 && 140;make sure opponent is not in guarding state
-attr = S, ST
-hitflag = MF
-priority = 3, Miss
-sparkno = -1
-;sprpriority = 2
-p2facing = 1
-p1stateno = 901
-p2stateno = 904
-p2getp1state = 1
+type = HitDef
+Trigger1 = Time = 0
+attr = S, ST          
+hitflag = MF          
+priority = 1, Miss    
+sparkno = -1          
+p1sprpriority = 1     
+                      
+p1facing = 1
+p2facing = 1          
+p1stateno = 901       
+p2stateno = 904       
 id = 900
-;chainID = id_number (int)
-;nochainID = nochain_1, nochain_2 (int)
-numhits = 0
+guard.dist = 0        
 getpower = 340
 givepower = 244
-persistent = 0
 
 [State 900, 3]
 type = Nothitby
@@ -1240,7 +1237,7 @@ time = 4
 
 [State 900, 4]
 type = ChangeState
-trigger1 = animtime = 0
+trigger1 = animtime = 0 
 value = 0
 ctrl = 1
 
@@ -1248,9 +1245,10 @@ ctrl = 1
 ; Super Argentina BackBreaker succeed
 [Statedef 901]
 type    = S
-physics = S
 movetype= A
+physics = N
 anim = 901
+poweradd = 0
 ctrl = 0
 velset = 0,0
 
@@ -1310,7 +1308,6 @@ trigger1 = time >= 34
 trigger1 = time <= 37
 pos = 6,-120 ;default: 6,-109
 
-; test if this is the max throw height
 [State 901, 4.6]
 type = TargetBind
 trigger1 = time = 38
@@ -1323,7 +1320,6 @@ attr = S, ST
 hitflag = A
 priority = 7,Hit
 sparkno = -1
-;sprpriority = 2
 p2facing = 1
 p1stateno = 902
 p2stateno = 906

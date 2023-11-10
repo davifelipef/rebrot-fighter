@@ -584,7 +584,7 @@ Clsn2: 1
 ; Super Argentina BackBreaker Attempt
 [Begin Action 900]
 Clsn1: 1
-  Clsn1[0] = 2, -43, 35, 0
+  Clsn1[0] = 13, -43, 32, 0
 Clsn2: 1
   Clsn2[0] = -13, -42, 12, 0
 900,0, 0,0, 1
@@ -599,7 +599,7 @@ Clsn2: 1
 900,2, 0,0, 13
 Clsn2: 1
   Clsn2[0] = -10, -42, 15, 0
-210,0, 0,0, 5
+210,0, 0,0, 13
 
 ; Super Argentina BackBreaker Success
 [Begin Action 901]
@@ -624,8 +624,8 @@ Clsn1: 1
 900,9, 0,0, 4
 900,10, 0,0, 4
 900,11, 0,0, 25
-900,9, 0,0, 4
 210,0, 0,0, 4
+0,0, 0,0, 4
 
 ; Throw by Super Argentina BackBreaker
 [Begin Action 904]
@@ -656,52 +656,6 @@ Clsn2: 1
 ; Throw by Super Argentina BackBreaker - lying down
 [Begin Action 909]
 5040,10, 0,0, 1
-
-; Command throw (attempt)
-[Begin Action 2000]
-Clsn2: 1
-  Clsn2[0] = -11, -35, 13, -5
-900,0, 0,0, 4
-Clsn1: 1
-  Clsn1[0] = 22, -37, 32, 1
-Clsn2: 1
-  Clsn2[0] = -3, -33, 21, -3
-900,1, 0,0, 10
-Clsn2: 1
-  Clsn2[0] = -2, -33, 20, -4
-900,2, 0,0, 4
-Clsn2: 1
-  Clsn2[0] = -10, -32, 12, -3
-0,2, 0,0, 4
-Clsn2: 1
-  Clsn2[0] = -10, -30, 12, -1
-0,0, 0,0, 4
-
-; Command Throw (success)
-[Begin Action 2001]
-900,0, 0,0, 4
-900,1, 0,0, 10
-900,3, 0,0, 10
-900,4, 0,0, 20
-900,5, 0,0, 30
-900,6, 0,0, 20
-900,7, 0,0, 30
-900,8, 0,0, 10
-900,9, 0,0, 10, H
-900,10, 0,0, 10, H
-900,11, 0,0, 20, H
-
-; Thrown (action 2000)
-[Begin Action 2002]
-5000,0, 0,0, 4
-5010,0, 5,0, 10
-5010,0, 5,0, 10
-5060,0, 0,0, 20
-5160,0, 0,0, 30
-5060,0, 0,-120, 20, V
-5160,0, 0,10, 30, H
-5160,0, 0,11, 10
-5160,0, -8,15, 10
 
 ;---------------------------
 ; Stand/Air Hit high (light)
