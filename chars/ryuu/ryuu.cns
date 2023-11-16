@@ -576,7 +576,7 @@ trigger2 = stateno = 230 && movecontact
 value = 210
 
 ;---------------------------------------------------------------------------
-; Standing strong kick
+; Standing Heavy Kick
 ; CNS difficulty: easy
 [Statedef 240]
 type    = S

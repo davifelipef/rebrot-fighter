@@ -442,8 +442,7 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-; Standing Medium Punch
-; former standing light kick
+; Standing Light Kick
 ; CNS difficulty: easy
 [Statedef 230]
 type    = S
@@ -494,7 +493,7 @@ trigger2 = stateno = 230 && movecontact
 value = 210
 
 ;---------------------------------------------------------------------------
-; Standing strong kick
+; Standing Heavy Kick
 ; CNS difficulty: easy
 [Statedef 240]
 type    = S

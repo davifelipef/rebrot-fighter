@@ -299,7 +299,7 @@ Clsn2: 1
 0,0, 0,0, 1
 
 ;--------------------------------------------------
-; Stand Light Punch
+; Standing Light Punch
 [Begin Action 200]
 Clsn2: 1
   Clsn2[0] = -6, -33, 14, 0
@@ -313,7 +313,7 @@ Clsn2: 1
   Clsn2[0] = -5, -35, 13, 0
 200,0, 0,0, 2
 
-; Stand Light Punch 2
+; Standing Light Punch 2
 [Begin Action 201]
 Clsn1: 1
   Clsn1[0] = 22, -27, 45, -16
@@ -321,26 +321,9 @@ Clsn2: 1
   Clsn2[0] = -2, -40, 22, 1
 200,2, 0,0, 7
 
-; Stand Medium Punch
+; Standing Heavy Punch
 [Begin Action 210]
 0,0, 0,0, 1
-
-; Stand Heavy Punch
-[Begin Action 220]
-Clsn2: 2
-  Clsn2[0] = -7, -34, 19, 0
-  Clsn2[1] = 18, -23, 28, -10
-220,2, 3,0, 4
-Clsn2: 2
-  Clsn2[0] = -5, -41, 20, 0
-  Clsn2[1] = 21, -39, 31, -18
-220,1, 5,0, 4
-Clsn1: 1
-  Clsn1[0] = 10, -65, 29, -27
-Clsn2: 2
-  Clsn2[0] = -1, -46, 10, -14
-  Clsn2[1] = -5, -26, 20, 0
-220,0, 6,0, 7
 
 ;--------------------------------------------------
 ; Standing Light Kick
@@ -357,25 +340,24 @@ Clsn2: 1
   Clsn2[0] = -6, -31, 12, -1
 230,2, 0,0, 7
 
-; Standing Medium Kick
+; Standing Heavy Kick
 [Begin Action 240]
-0,0, 0,0, 1
-
-; Standing Strong Kick
-[Begin Action 250]
 0,0, 0,0, 1
 
 ;--------------------------------------------------
 ; Crouching Light Punch
 [Begin Action 400]
+Clsn2: 1
+  Clsn2[0] = -5, -29, 15, 0
+11,0, 0,0, 3
 Clsn1: 1
   Clsn1[0] = 16, -22, 39, -11
 Clsn2: 1
   Clsn2[0] = -5, -29, 15, 0
-400,0, 0,0, 7
+400,0, 0,0, 10
 Clsn2: 1
   Clsn2[0] = -9, -26, 12, -1
-11,0, 0,0, 2
+11,0, 0,0, 4
 
 ; Crouching Medium Punch
 [Begin Action 410]
