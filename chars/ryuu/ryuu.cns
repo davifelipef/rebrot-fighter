@@ -624,7 +624,7 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-;Crouching light punch
+;Crouching Light Punch
 ; CNS difficulty: easy
 ; Description: Simple crouching attack. The HitDef's guardflag parameter
 ;     is set to "L", meaning that the move can only be guarded low
@@ -711,7 +711,7 @@ value = 0, 0
 ;This is the first hit, triggered on the 3rd element of animation.
 [State 410, 2]
 type = HitDef
-trigger1 = AnimElem = 2
+trigger1 = AnimElem = 3
 attr = C, NA
 damage    = 37
 animtype  = Medium
@@ -731,7 +731,7 @@ air.velocity = -3,-4
 ;This is the second hit, triggered on the 4th element of animation.
 [State 410, 3]
 type = HitDef
-trigger1 = AnimElem = 3
+trigger1 = AnimElem = 4
 attr = C, NA
 damage    = 36
 animtype  = Heavy
@@ -757,7 +757,7 @@ value = 11
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-;Crouching Medium Punch
+;Crouching Light Kick
 ; CNS difficulty: easy
 [Statedef 430]
 type    = C
@@ -802,7 +802,7 @@ value = 11
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-;Crouch Strong Kick
+;Crouching Heavy Kick
 ; CNS difficulty: easy
 ; Description: This move uses "Trip" for the "ground.type" parameter in
 ;     its HitDef. It's a special type that puts the opponent in a tripped
@@ -1062,7 +1062,8 @@ ground.velocity = -7
 air.velocity = -3,-4
 
 ;---------------------------------------------------------------------------
-;Kung Fu Throw - Attempt
+;---------------------------------------------------------------------------
+;Throw - Attempt
 ; CNS difficulty: medium-advanced
 ; Description: Throws are not difficult to make, although then can be
 ;     tedious at times. Throw attempt states have a HitDef of a
@@ -1116,7 +1117,7 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-;Kung Fu Throw - Throwing the opponent
+;Throwing the opponent
 ; Description: In this state, KFM throws the opponent by binding him to
 ;     various offsets based on his current frame of animation. For
 ;     example, [State 810, Bind 1] binds the opponent to an offset of
@@ -1159,69 +1160,76 @@ value = 800, 0
 [State 810, Bind 1]
 type = TargetBind
 trigger1 = AnimElemTime(2) < 0
-pos = 28, 0
+pos = 28, 0 ; default:28, 0
 
 [State 810, Width 2-11]
 type = Width
 trigger1 = AnimElemTime(2) >= 0 && AnimElemTime(12) < 0
-edge = 60,0
+edge = 10,0 ; default: 60,0
 
+; getting grabbed
 [State 810, Bind 2-4]
 type = TargetBind
 trigger1 = AnimElemTime(2) >= 0 && AnimElemTime(5) < 0
-pos = 58, 0
+pos = 30, 0
 
+; this changed nothing, apparently
 [State 810, Bind 5]
 type = TargetBind
 trigger1 = AnimElemTime(5) >= 0 && AnimElemTime(6) < 0
-pos = 47, 0
+pos = 17, 0 ; default: 47, 0
 
-[State 810, holdfwd - Turn 6] ;If was holding fwd before, turn now
+; turns the character if it was holding forward
+[State 810, holdfwd - Turn 6] 
 type = Turn
 trigger1 = var(2)
 trigger1 = AnimElem = 6
 
-[State 810, holdfwd - Pos 6] ;If was holding fwd before, move a little
+; move the character a little if it was holding forward
+[State 810, holdfwd - Pos 6] 
 type = PosAdd
 trigger1 = var(2)
 trigger1 = AnimElem = 6
-x = -37
+x = -37 ; default: -37
 
-[State 810, holdfwd - Turn Target 6] ;If was holding fwd before, turn target too
+; turn the target too, if it was holding forward
+[State 810, holdfwd - Turn Target 6]
 type = TargetFacing
 trigger1 = var(2)
 trigger1 = AnimElem = 6
 value = -1
 
+; this is when the character releases the target
 [State 810, Bind 6]
 type = TargetBind
 trigger1 = AnimElemTime(6) >= 0 && AnimElemTime(7) < 0
-pos = 41, -60
+pos = 41, -20 ; default: 41, -60
 
 [State 810, Bind 7]
 type = TargetBind
 trigger1 = AnimElemTime(7) >= 0 && AnimElemTime(8) < 0
-pos = 25, -75
+pos = 25, -20 ; default: 25, -75
 
 [State 810, Bind 8]
 type = TargetBind
 trigger1 = AnimElemTime(8) >= 0 && AnimElemTime(9) < 0
-pos = 15, -90
+pos = 15, -20 ; default: 15, -90
 
 [State 810, Bind 9]
 type = TargetBind
 trigger1 = AnimElemTime(9) >= 0 && AnimElemTime(10) < 0
-pos = -5, -96
+pos = -5, -20 ; default: -5, -96
 
 [State 810, Bind 10]
 type = TargetBind
 trigger1 = AnimElemTime(10) >= 0 && AnimElemTime(11) < 0
-pos = -14, -90
+pos = -14, -20 ; default: -14, -90
 
+; the y in this pos determines the maximum height the character is thrown
 [State 810, Bind 11]
 type = TargetBind
 trigger1 = AnimElem = 11
-pos = -50, -50
+pos = 4, -4 ; default: -50, -50
 
 [State 810, Hurt 11]
 type = TargetLifeAdd
@@ -1249,7 +1257,7 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-;Thrown by Kung Fu Throw
+;Thrown
 ; (a custom gethit state)
 ; Description: This is the state that the opponent changes to after being
 ;     hit by KFM's throw HitDef. The important thing here is to use a
@@ -1278,7 +1286,7 @@ trigger1 = !gethitvar(isbound)
 value = 5050
 
 ;---------------------------------------------------------------------------
-;Thrown by Kung Fu Throw - thrown into the air
+;Thrown into the air
 ; (a custom gethit state)
 ; Description: This state has the opponent flying through the air and
 ;     falling down onto the ground. The SelfState controller sets the

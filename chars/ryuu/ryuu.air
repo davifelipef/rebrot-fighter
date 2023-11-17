@@ -298,7 +298,9 @@ Clsn2: 1
 ;--------------------------------------------------
 ; Taunt
 [Begin Action 195]
-0,0, 0,0, 1
+Clsn2: 1
+  Clsn2[0] = -10, -38, 14, -4
+190,0, 0,0, 60
 
 ;--------------------------------------------------
 ; Standing Light Punch
@@ -367,26 +369,42 @@ Clsn2: 1
   Clsn2[0] = -9, -26, 12, -1
 11,0, 0,0, 4
 
-; Crouching Medium Punch
+; Crouching Heavy Punch
 [Begin Action 410]
-0,0, 0,0, 1
-
-; Crouching Strong Punch
-[Begin Action 420]
-0,0, 0,0, 1
+Clsn2: 1
+  Clsn2[0] = -9, -29, 12, -4
+11,0, 0,0, 2
+Clsn2: 1
+  Clsn2[0] = -7, -30, 14, -5
+410,0, 0,0, 3
+Clsn1: 1
+  Clsn1[0] = 16, -39, 27, -18
+Clsn2: 1
+  Clsn2[0] = -6, -33, 15, -8
+410,1, 0,0, 5
+Clsn1: 1
+  Clsn1[0] = 6, -60, 22, -27
+Clsn2: 1
+  Clsn2[0] = -9, -40, 12, -9
+410,2, 0,0, 7
+Clsn2: 1
+  Clsn2[0] = -7, -35, 14, -7
+410,1, 0,0, 4
+Clsn2: 1
+  Clsn2[0] = -10, -31, 11, -3
+410,0, 0,0, 3
+Clsn2: 1
+  Clsn2[0] = -9, -31, 12, -3
+11,0, 0,0, 3
 
 ;--------------------------------------------------
 ; Crouching Light Kick
 [Begin Action 430]
-0,0, 0,0, 1
+11,0, 0,0, 1
 
-; Crouching Medium Kick
+; Crouching Heavy Kick
 [Begin Action 440]
-0,0, 0,0, 1
-
-; Crouching Strong Kick
-[Begin Action 450]
-0,0, 0,0, 1
+11,0, 0,0, 1
 
 ;--------------------------------------------------
 ; Jump Light Punch
