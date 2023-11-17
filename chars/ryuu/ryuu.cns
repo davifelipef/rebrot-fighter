@@ -340,14 +340,14 @@ guardflag = MA                   ;Flags on how move is to be guarded against
 hitflag = MAF                    ;Flags of conditions that move can hit
 priority = 3, Hit                ;Attack priority: 0 (least) to 7 (most), 4 default
 ;Hit/Miss/Dodge type (Def: Hit)
-pausetime = 2, 2                ;Time attacker pauses, time opponent shakes - Default: 2,10
+pausetime = 3, 5                ;Time attacker pauses, time opponent shakes - Default: 2,10
 sparkno = 0                      ;Spark anim no (Def: set above)
 sparkxy = -10, -26               ;X-offset for the "hit spark" rel. to p2. Default: -10, -76
 ;Y-offset for the spark rel. to p1
 hitsound = 5, 0                  ;Sound to play on hit
 guardsound = 6, 0                ;Sound to play on guard
 ground.type = High               ;Type: High, Low, Trip (def: Normal)
-ground.slidetime = 4             ;Time that the opponent slides back - Default: 3
+ground.slidetime = 7             ;Time that the opponent slides back - Default: 3
 ground.hittime  = 4             ;Time opponent is in hit state - Default: 11
 ground.velocity = -5             ;Velocity at which opponent is pushed - Default: -4
 airguard.velocity = -1.9,-.8     ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
@@ -414,15 +414,15 @@ guardflag = MA                   ;Flags on how move is to be guarded against
 hitflag = MAF                    ;Flags of conditions that move can hit
 priority = 3, Hit                ;Attack priority: 0 (least) to 7 (most), 4 default
 ;Hit/Miss/Dodge type (Def: Hit)
-pausetime = 2, 10                ;Time attacker pauses, time opponent shakes
+pausetime = 3, 10                ;Time attacker pauses, time opponent shakes
 sparkno = 0                      ;Spark anim no (Def: set above)
 sparkxy = -10, -26               ;X-offset for the "hit spark" rel. to p2. Default: -10, -76
 ;Y-offset for the spark rel. to p1
 hitsound = 5, 0                  ;Sound to play on hit
 guardsound = 6, 0                ;Sound to play on guard
 ground.type = High               ;Type: High, Low, Trip (def: Normal)
-ground.slidetime = 6             ;Time that the opponent slides back
-ground.hittime  = 11             ;Time opponent is in hit state
+ground.slidetime = 12             ;Time that the opponent slides back
+ground.hittime  = 4             ;Time opponent is in hit state
 ground.velocity = -3             ;Velocity at which opponent is pushed
 airguard.velocity = -1.9,-.8     ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
 air.type = High                  ;Type: High, Low, Trip (def: same as ground.type)
@@ -896,52 +896,8 @@ value = 1
 type = changestate
 triggerall = command = "y"
 trigger1 = ctrl
-trigger2 = stateno = 600 && movecontact
+trigger2 = stateno = 600 && movehit
 value = 620
-
-;---------------------------------------------------------------------------
-;Jump Medium Punch
-; CNS difficulty: easy
-[Statedef 610]
-type    = A
-movetype= A
-physics = A
-juggle  = 4
-poweradd= 30
-ctrl = 0
-anim = 610
-sprpriority = 2
-
-[State 610, 2]
-type = PlaySnd
-trigger1 = Time = 2
-value = 0, 1
-
-[State 610, 3]
-type = HitDef
-trigger1 = Time = 0
-attr = A, NA
-damage = 72
-guardflag = HA
-priority = 4
-pausetime = 2,12
-sparkno = 1
-sparkxy = -10,-28
-hitsound   = 5,3
-guardsound = 6,0
-animtype = Med
-ground.type = High
-ground.slidetime = 12
-ground.hittime  = 14
-ground.velocity = -6
-air.velocity = -3,-4
-
-[State -1, Jump Light Punch]
-type = changestate
-triggerall = command = "x"
-trigger1 = ctrl
-trigger2 = stateno = 610 && movecontact
-value = 600
 
 ;---------------------------------------------------------------------------
 ;Jump Heavy Punch
@@ -979,13 +935,6 @@ ground.slidetime = 12
 ground.hittime  = 14
 ground.velocity = -6
 air.velocity = -3,-4
-
-[State -1, Jump Light Punch]
-type = changestate
-triggerall = command = "x"
-trigger1 = ctrl
-trigger2 = stateno = 620 && movecontact
-value = 600
 
 ;---------------------------------------------------------------------------
 ;Jump Light Kick
@@ -1025,7 +974,7 @@ air.velocity = -2,-3
 air.hittime = 14
 
 ;---------------------------------------------------------------------------
-;Jump Strong Kick
+;Jump Heavy Kick
 ; CNS difficulty: easy
 [Statedef 640]
 type    = A

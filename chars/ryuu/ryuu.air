@@ -287,13 +287,13 @@ Clsn2: 1
 [Begin Action 191]
 190,0, 0,0, 160
 190,1, 0,0, 100
-5,0, 0,0, 5
+5,0, 0,0, 6
 
 ; Intro (Player 2)
 [Begin Action 192]
 190,0, 0,0, 30
 190,2, 0,0, 100
-5,0, 0,0, 5
+5,0, 0,0, 6
 
 ;--------------------------------------------------
 ; Taunt
@@ -417,10 +417,6 @@ Clsn2: 1
 Clsn2: 1
   Clsn2[0] = -7, -42, 17, -13
 42,5, 0,0, -1
-
-; Jump Medium Punch
-[Begin Action 610]
-0,0, 0,0, 1
 
 ; Jump Heavy Punch
 [Begin Action 620]
@@ -677,11 +673,6 @@ Clsn2: 1
 
 ;--------------------------------------------------
 
-; For the sake of compatibility with other characters that use the helper AI
-; activation method, please don't change the number of these next two Anims.
-[Begin Action 9741]
--1,0,0,0,-1
-
 ; Intro 1 balloon right
 [Begin Action 6000]
 6000,0, 0,0, 10
@@ -689,6 +680,11 @@ Clsn2: 1
 ; Intro 1 balloon left
 [Begin Action 6001]
 6001,0, 0,0, 10
+
+; For the sake of compatibility with other characters that use the helper AI
+; activation method, please don't change the number of these next two Anims.
+[Begin Action 9741]
+-1,0,0,0,-1
 
 ; Include the following Anim if AND ONLY IF you've put the requisite 18 commands
 ; at the very top of your character's CMD.  If you've only included the first 11
