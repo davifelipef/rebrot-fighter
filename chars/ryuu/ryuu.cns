@@ -531,18 +531,18 @@ value = 0, 1
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-animtype  = Medium
+animtype  = Light
 damage    = 26
 guardflag = MA
-pausetime = 12,12
+pausetime = 4,12
 sparkno = 0
-sparkxy = -10,-30
+sparkxy = -10,-26
 hitsound   = 5,1
 guardsound = 6,0
-ground.type = Low
-ground.slidetime = 10
+ground.type = High
+ground.slidetime = 2
 ground.hittime  = 14
-ground.velocity = -5
+ground.velocity = -3
 air.velocity = -2.5,-3.5
 
 [State 230, 3]

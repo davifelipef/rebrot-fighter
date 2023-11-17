@@ -55,31 +55,29 @@ Clsn2: 1
 [Begin Action 020]
 Clsn2: 1
   Clsn2[0] = -9, -34, 11, 0
-20,3, 0,0, 6
+20,0, 0,0, 7
 Clsn2: 1
   Clsn2[0] = -9, -34, 11, 0
-20,0, 0,0, 6
+20,1, 0,0, 10
 Clsn2: 1
   Clsn2[0] = -9, -34, 11, 0
-20,2, 0,0, 6
+20,2, 0,0, 7
 Clsn2: 1
   Clsn2[0] = -9, -34, 11, 0
-20,1, 0,0, 6
-Clsn2: 1
-  Clsn2[0] = -9, -34, 11, 0
-20,0, 0,0, 10
+20,3, 0,0, 10
 
 ; Walking Back
 [Begin Action 021]
 Clsn2: 1
   Clsn2[0] = -8, -33, 12, 0
-20,3, 0,0, 6
+20,1, 0,0, 10
 Clsn2: 1
   Clsn2[0] = -8, -34, 12, 0
-20,2, 0,0, 6
+20,0, 0,0, 7
 Clsn2: 1
   Clsn2[0] = -8, -35, 12, 0
-20,1, 0,0, 6
+20,3, 0,0, 10
+20,2, 0,0, 7
 
 ;--------------------------------------------------
 ; Jump start frame
@@ -93,10 +91,23 @@ Clsn2: 1
 
 ; Starting Jumping up
 [Begin Action 041]
-42,0, 0,0, 6
-42,5, 0,0, -1
+Clsn2: 1
+  Clsn2[0] = -11, -45, 13, -8
+42,0, 0,0, 3
+Clsn2: 1
+  Clsn2[0] = -11, -45, 13, -8
+42,0, 0,0, 4
+Clsn2: 1
+  Clsn2[0] = -7, -46, 17, -9
+42,5, 0,0, 7
+Clsn2: 1
+  Clsn2[0] = -11, -46, 13, -9
+42,0, 0,0, 3
+Clsn2: 1
+  Clsn2[0] = -11, -39, 13, -2
+42,0, 0,7, -1
 
-; Starting Jumping forwards
+; Jumping forwards
 [Begin Action 042]
 Clsn2: 1
   Clsn2[0] = -5, -44, 10, -6
@@ -123,7 +134,7 @@ Clsn2: 1
   Clsn2[0] = -5, -50, 11, -5
 42,0, 0,0, -1
 
-; Starting Jumping backwards
+; Jumping backwards
 [Begin Action 043]
 Clsn2: 1
   Clsn2[0] = -4, -43, 10, -5
@@ -150,26 +161,17 @@ Clsn2: 1
   Clsn2[0] = -7, -44, 10, -4
 42,0, 0,0, -1
 
-; Peak and coming down from Jumping up
-[Begin Action 044]
-42,5, 0,0, 1
-
-; Peak and coming down from Jumping forwards
-[Begin Action 045]
-42,0, 0,0, 1
-
-; Peak and coming down from Jumping backwards
-[Begin Action 046]
-42,0, 0,0, 1
-
-; Jump land frame
+; Jump land animation
 [Begin Action 047]
 Clsn2: 1
-  Clsn2[0] = -8, -33, 12, 0
+  Clsn2[0] = -8, -37, 12, -4
 41,0, 0,0, 2
 Clsn2: 1
-  Clsn2[0] = -9, -31, 15, 0
+  Clsn2[0] = -9, -34, 15, -3
 41,1, 0,0, 2
+Clsn2: 1
+  Clsn2[0] = -9, -37, 15, -6
+41,0, 0,0, 2
 
 ;--------------------------------------------------
 ; Run forwards
@@ -329,16 +331,22 @@ Clsn2: 1
 ; Standing Light Kick
 [Begin Action 230]
 Clsn2: 1
-  Clsn2[0] = -6, -31, 12, -1
+  Clsn2[0] = -5, -35, 13, -5
 230,0, 0,0, 2
 Clsn2: 1
-  Clsn2[0] = -6, -31, 12, -1
-230,1, 0,0, 4
+  Clsn2[0] = -3, -36, 15, -6
+230,1, 0,0, 3
 Clsn1: 1
   Clsn1[0] = 15, -26, 41, -15
 Clsn2: 1
-  Clsn2[0] = -6, -31, 12, -1
+  Clsn2[0] = -3, -36, 15, -6
 230,2, 0,0, 7
+Clsn2: 1
+  Clsn2[0] = -3, -36, 15, -6
+230,1, 0,0, 3
+Clsn2: 1
+  Clsn2[0] = -5, -34, 13, -4
+230,0, 0,0, 2
 
 ; Standing Heavy Kick
 [Begin Action 240]
