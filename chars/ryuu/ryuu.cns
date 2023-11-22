@@ -1,4 +1,4 @@
-; KFM's constants and state file.
+; Ryuu's constants and state file.
 ; There are comments scattered through this file, so you may like to
 ; take a look if would like to learn more about the cns.
 
@@ -22,7 +22,7 @@ guard.sparkno = 40
 ;1 to enable echo on KO
 KO.echo = 0
 ;Volume offset (negative for softer)
-volume = 0
+;volume = 0
 ;Variables with this index and above will not have their values
 ;reset to 0 between rounds or matches. There are 60 int variables,
 ;indexed from 0 to 59, and 40 float variables, indexed from 0 to 39.
@@ -195,9 +195,9 @@ var(59) = 120 ; Adjust this value to set the duration of the balloon display (in
 [State 181, EndBalloonIntro] ; State to remove the balloon
 type = RemoveExplod
 trigger1 = var(59) <= 0
-value = 1 ; Remove the balloon with ID 1
+;value = 1 ; Remove the balloon with ID 1
 trigger1 = 1
-var(59) = 0 ; Reset var(59) when removing the balloon
+;var(59) = 0 ; Reset var(59) when removing the balloon
 
 ;---------------------------------------------------------------------------
 ;Introduction
@@ -310,9 +310,9 @@ var(59) = 120 ; Adjust this value to set the duration of the balloon display (in
 [State 181, EndBalloonIntro] ; State to remove the balloon
 type = RemoveExplod
 trigger1 = var(59) <= 0
-value = 1 ; Remove the balloon with ID 1
+;value = 1 ; Remove the balloon with ID 1
 trigger1 = 1
-var(59) = 0 ; Reset var(59) when removing the balloon
+;var(59) = 0 ; Reset var(59) when removing the balloon
 
 
 ;---------------------------------------------------------------------------
