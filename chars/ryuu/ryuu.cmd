@@ -381,7 +381,7 @@ time = 1
 
 [command]
 name = "AoiHanaX"
-command = ~D,B,x
+command = ~D,B,~x
 time = 35
 
 ;[command]
@@ -880,8 +880,8 @@ value = 1300
 triggerall = command = "AoiHanaX"
 triggerall = !statetype = A
 trigger1 = ctrl
-trigger2 = ctrl
-trigger3 = (StateNo=[200,999]) && movecontact
+;trigger2 = ctrl
+trigger2 = (StateNo=[200,999]) && movehit
 
 ;[State -1, AoiHana Y]
 ;type = ChangeState

@@ -465,15 +465,15 @@ movetype= A                      ;Move-type: A-attack, I-idle, H-gethit
 physics = S                      ;Physics: S-stand, C-crouch, A-air
 juggle  = 2                      ;Number of air juggle points move takes
 ;Commonly-used controllers:
-velset = 4,0                     ;Set velocity (x,y) (Def: no change)
+velset = 6,0                     ;Set velocity (x,y) (Def: no change)
 ctrl = 0                         ;Set ctrl (Def: no change)
-anim = 220                      ;Change animation (Def: no change)
+anim = 210                      ;Change animation (Def: no change)
 poweradd = 10                    ;Power to add (Def: 0)
 sprpriority = 2                  ;Set p1's sprite layering priority to 2 (in front)
 
 [State 210, 1]
 type = HitDef
-trigger1 = AnimElem = 1	   ;2 means the frame that have the hit box
+trigger1 = AnimElem = 2	   ;2 means the frame that have the hit box
 attr = S, NA                     ;Attribute: Standing, Normal Attack
 damage = 23, 0                   ;Damage that move inflicts, guard damage
 animtype = Heavy                 ;Animation type: Light, Medium, Heavy, Back (def: Light)
