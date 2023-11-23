@@ -146,13 +146,13 @@
 ;   old_button = new_button
 ; If new_button is left blank, the button cannot be pressed.
 [Remap]
-x = x
-y = y
-z = z
-a = a
-b = b
-c = c
-s = s
+x = a ; light punch
+y = b ; heavy punch
+z =  
+a = x ; light kick
+b = y ; heavy kick
+c = 
+s = s ; taunt
 
 ;-| Default Values |-------------------------------------------------------
 [Defaults]

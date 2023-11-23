@@ -90,6 +90,19 @@
 ; command = ~60$D, U, c
 ; time = 10
 ; 
+;-| Button Remapping |-----------------------------------------------------
+; This section lets you remap the player's buttons (to easily change the
+; button configuration). The format is:
+;   old_button = new_button
+; If new_button is left blank, the button cannot be pressed.
+[Remap]
+x = a ; light punch
+y = b ; heavy punch
+z =  
+a = x ; light kick
+b = y ; heavy kick
+c = 
+s = s ; taunt 
 ;==================================================================================
 ;======| RELACIONADO À AI - AI RELATED |===========================================
 ;==================================================================================
@@ -677,14 +690,14 @@ trigger1 = ctrl
 [State -1, Stand Light Punch]
 type = ChangeState
 value = 200
-triggerall = command = "x"
+triggerall = command = "x" ; "L" on keyboard
 triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
-; Stand Medium Punch
-[State -1, Stand Medium Punch]
+; Stand Heavy Punch
+[State -1, Stand Heavy Punch]
 type = ChangeState
 value = 210
 triggerall = command = "y"
@@ -707,7 +720,7 @@ trigger1 = ctrl
 [State -1, Stand Light Kick]
 type = ChangeState
 value = 230
-triggerall = command = "a"
+triggerall = command = "a" ; "<" on keyboard
 triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
@@ -802,10 +815,10 @@ trigger1 = statetype = A
 trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
-; Jump Medium Punch
+; Jump Heavy Punch
 [State -1, Jump Medium Punch]
 type = ChangeState
-value = 610
+value = 620
 triggerall = command = "y"
 trigger1 = statetype = A
 trigger1 = ctrl
