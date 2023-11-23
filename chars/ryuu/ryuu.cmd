@@ -384,10 +384,10 @@ name = "AoiHanaX"
 command = ~D,B,x
 time = 35
 
-[command]
-name = "AoiHanaY"
-command = ~D,B,y
-time = 35
+;[command]
+;name = "AoiHanaY"
+;command = ~D,B,y
+;time = 35
 
 ;-| Double Tap |-----------------------------------------------------------
 
@@ -883,11 +883,11 @@ trigger1 = ctrl
 trigger2 = ctrl
 trigger3 = (StateNo=[200,999]) && movecontact
 
-[State -1, AoiHana Y]
-type = ChangeState
-value = 1300
-triggerall = command = "AoiHanaY"
-triggerall = !statetype = A
-trigger1 = ctrl
-trigger2 = ctrl
-trigger3 = (StateNo=[200,999]) && movecontact
+;[State -1, AoiHana Y]
+;type = ChangeState
+;value = 1300
+;triggerall = command = "AoiHanaY"
+;triggerall = !statetype = A
+;trigger1 = ctrl
+;trigger2 = ctrl
+;trigger3 = (StateNo=[200,999]) && movecontact

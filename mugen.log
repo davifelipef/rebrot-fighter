@@ -79,20 +79,20 @@ Loading character chars/ff3_0/ff3_0.def...
   Loading anim ryuu.air...OK
   Loading snd ryuu.snd...OK
   Loading pals...OK
-  1732 expressions (712 on trigger lines)
+  1726 expressions (707 on trigger lines)
 Character ff3_0.def loaded OK
 Start of game loop
 End of game loop
-Total time: 37.99s
-Total frames: 2280 	Skipped frames: 0
+Total time: 40.15s
+Total frames: 2410 	Skipped frames: 0
 Avg game rate: 60.02
 Avg frame rate: 60.02
 
 Returned from main loop
 Deinitializing...
-Frames      : 2280
-Time elapsed: 38.050 sec
-ticks: 3805, tps: 100, start 55, end 3860
+Frames      : 2410
+Time elapsed: 40.210 sec
+ticks: 4021, tps: 100, start 60, end 4081
 
 Clearing player cache...OK
 Freeing character info...OK

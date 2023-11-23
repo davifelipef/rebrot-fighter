@@ -1360,7 +1360,7 @@ x = 0
 
 [State 1000, ChangeState]
 type = VarSet
-trigger1 = Command = "AoiHanaX" || Command = "AoiHanaY"
+trigger1 = Command = "AoiHanaX" ;|| Command = "AoiHanaY"
 trigger1 = AnimElemTime (1) > 0 && AnimElemTime (4) < 1 && !var(20)
 v = 20
 value = 1
@@ -1464,7 +1464,7 @@ x = 0
 
 [State 1010, ChangeState]
 type = VarSet
-trigger1 = Command = "AoiHanaX" || Command = "AoiHanaY"
+trigger1 = Command = "AoiHanaX" ;|| Command = "AoiHanaY"
 trigger1 = var(20) = 0
 triggerall = var(59)< 1
 v = 20
