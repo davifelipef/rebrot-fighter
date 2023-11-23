@@ -379,7 +379,18 @@ time = 1
 
 ;-| Special Motions |------------------------------------------------------
 
+[command]
+name = "AoiHanaX"
+command = ~D,B,x
+time = 35
+
+[command]
+name = "AoiHanaY"
+command = ~D,B,y
+time = 35
+
 ;-| Double Tap |-----------------------------------------------------------
+
 [Command]
 name = "FF"     ;Required (do not remove)
 command = F, F
@@ -860,3 +871,23 @@ trigger1 = statetype = A
 trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
+
+;Special Moves
+
+[State -1, AoiHana X]
+type = ChangeState
+value = 1300
+triggerall = command = "AoiHanaX"
+triggerall = !statetype = A
+trigger1 = ctrl
+trigger2 = ctrl
+trigger3 = (StateNo=[200,999]) && movecontact
+
+[State -1, AoiHana Y]
+type = ChangeState
+value = 1300
+triggerall = command = "AoiHanaY"
+triggerall = !statetype = A
+trigger1 = ctrl
+trigger2 = ctrl
+trigger3 = (StateNo=[200,999]) && movecontact
