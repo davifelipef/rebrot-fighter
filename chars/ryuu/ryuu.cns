@@ -34,10 +34,10 @@ IntPersistIndex = 58 ;Default: 60
 FloatPersistIndex = 40
 
 [Size]
-xscale = 1.3         ;Horizontal scaling factor.
-yscale = 1.3         ;Vertical scaling factor.
-ground.back = 15     ;Player width (back, ground)
-ground.front = 16    ;Player width (front, ground)
+xscale = 1.5         ;Horizontal scaling factor.
+yscale = 1.5         ;Vertical scaling factor.
+ground.back = 5    ;Player width (back, ground)
+ground.front = 12    ;Player width (front, ground)
 air.back = 12        ;Player width (back, air)
 air.front = 12       ;Player width (front, air)
 height = 60          ;Height of player (for opponent to jump over)
@@ -892,6 +892,13 @@ type = CtrlSet
 trigger1 = Time = 17
 value = 1
 
+[State -1, Jump Light Kick]
+type = changestate
+triggerall = command = "a"
+trigger1 = ctrl
+trigger2 = stateno = 600 && movehit
+value = 630
+
 [State -1, Jump Heavy Punch]
 type = changestate
 triggerall = command = "y"
@@ -963,7 +970,7 @@ guardflag = HA
 priority = 3
 pausetime = 8,8
 sparkno = 1
-sparkxy = -10,-40
+sparkxy = -10,-28
 hitsound   = 5,0
 guardsound = 6,0
 ground.type = High
@@ -1000,7 +1007,7 @@ guardflag = HA
 priority = 4
 pausetime = 12,12
 sparkno = 1
-sparkxy = -10,-40
+sparkxy = -10,-28
 hitsound   = 5,3
 guardsound = 6,0
 animtype = Heavy

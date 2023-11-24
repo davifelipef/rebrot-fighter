@@ -2,7 +2,7 @@
 M.U.G.E.N ver 1.00 (2011.01.18) status log
 ------------------------------------------
 Parsing command line...
-Command line: C:\Users\Administrativo\Documents\Programas\rebrot-fighter\mugen.exe
+Command line: C:\Users\Administrativo\Documents\Programas\rebrot-fighter\mugen.exe ff3_0 ff3_0
 Parse command line OK
 Initializing...
 Allocating game variables
@@ -61,11 +61,14 @@ System loaded OK
 Initialize OK
 Set up graphics...timer...OK
 Initializing character info...OK
-Initializing select screen...finding characters...OK
+Playing quick VS.
 
 Entering main loop
-Entering character select.
-attempting load and start...no BGM...attempting load and start...no BGM...Loading character chars/ryuu/ryuu.def...
+Initializing stage...
+  Loading BG...OK
+  Allocating helpers...OK
+Stage initialized OK
+Loading character chars/ff3_0/ff3_0.def...
   Loading info...OK
   Loading cmd command set ryuu.cmd...OK
   Loading cns ryuu.cns...OK
@@ -76,42 +79,23 @@ attempting load and start...no BGM...attempting load and start...no BGM...Loadin
   Loading anim ryuu.air...OK
   Loading snd ryuu.snd...OK
   Loading pals...OK
-  1725 expressions (706 on trigger lines)
-Character ryuu.def loaded OK
-attempting load and start...no BGM...Loading character chars/valf/valf.def...
-  Loading info...OK
-  Loading cmd command set valf.cmd...OK
-  Loading cns valf.cns...OK
-  Loading cmd state entry valf.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff valf.sff...OK
-  Loading anim valf.air...OK
-  Loading snd valf.snd...OK
-  Loading pals...OK
-  1580 expressions (681 on trigger lines)
-Character valf.def loaded OK
-Initializing stage...
-  Loading BG...OK
-  Allocating helpers...OK
-Stage initialized OK
+  1729 expressions (709 on trigger lines)
+Character ff3_0.def loaded OK
 Start of game loop
 End of game loop
-Total time: 69.65s
-Total frames: 4180 	Skipped frames: 0
-Avg game rate: 60.01
-Avg frame rate: 60.01
+Total time: 60.73s
+Total frames: 3645 	Skipped frames: 0
+Avg game rate: 60.02
+Avg frame rate: 60.02
 
-Entering character select.
-attempting load and start...no BGM...Returned from main loop
+Returned from main loop
 Deinitializing...
-Frames      : 4180
-Time elapsed: 75.600 sec
-ticks: 7560, tps: 100, start 57, end 7617
+Frames      : 3645
+Time elapsed: 60.840 sec
+ticks: 6084, tps: 100, start 56, end 6140
 
 Clearing player cache...OK
 Freeing character info...OK
-Freeing select screen...OK
 Freeing fight data...OK
 Freeing system data...OK
 Freeing game variables...OK
