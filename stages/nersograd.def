@@ -73,8 +73,8 @@ color 		= 0,0,0
 yscale 		= .2
 
 [Music]
-bgmusic 	= sound/katyusha.mp3
-bgvolume 	= 255
+bgmusic 	= sound/sad_brothers.mp3
+bgvolume 	= 60
 
 [BGdef]
 spr 		= stages/nersograd.sff
@@ -100,3 +100,81 @@ start 		= 0,-224
 delta 		= 1,1
 trans		= add
 
+[BG snow]
+type = anim
+actionno = 2
+start = 0, 480
+delta = 1,1
+trans = addalpha
+alpha = 115,255
+layerno = 1
+mask = 0
+tile = 1,1
+id = 5
+
+[BG snow]
+type = anim
+actionno = 2
+start = 1079, 480
+delta = 1,1
+trans = addalpha
+alpha = 115,255
+layerno = 1
+mask = 0
+tile = 1,1
+id = 5
+
+[BG snow]
+type = anim
+actionno = 2
+start = -1079, 480
+delta = 1,1
+trans = addalpha
+alpha = 115,255
+layerno = 1
+mask = 0
+tile = 1,1
+id = 5
+
+[Begin Action 2]
+3,0, 0,0, 5
+3,1, 0,0, 5
+3,2, 0,0, 5
+3,3, 0,0, 5
+3,4, 0,0, 5
+3,5, 0,0, 5
+3,6, 0,0, 5
+3,7, 0,0, 5
+3,8, 0,0, 5
+3,9, 0,0, 5
+3,10, 0,0, 5
+3,11, 0,0, 5
+3,12, 0,0, 5
+3,13, 0,0, 5
+3,14, 0,0, 5
+3,15, 0,0, 5
+3,16, 0,0, 5
+3,17, 0,0, 5
+3,18, 0,0, 5
+3,19, 0,0, 5
+
+[BGCtrlDef 1]
+CtrlId = 5
+
+[BGCtrl 1]
+type = posset
+time = 0
+x=0
+y = 140
+
+[BGCtrl 1]
+type = velset
+time = 0
+x = 0
+y = 0
+
+[BGCtrl 1]
+type = velset
+time = 230
+x = 0
+y = 0

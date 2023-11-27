@@ -253,6 +253,21 @@ name = "holdstart"
 command = /s
 time = 1
 
+;-| Special Motions |--------------------------------------------------
+
+; Super Kick
+[Command]
+name = "QCB_a"
+command = ~D,B,~a 
+time = 35
+
+;-| Special Moves |--------------------------------------------------
+
+[command]
+name = "AoiHanaX"
+command = ~D,B,~x
+time = 35
+
 ;-| CPU |--------------------------------------------------------------
 ; Note that if you make any changes to the basic one-button or recovery
 ; commands, you'll need to make the same changes to their matching commands here
@@ -378,16 +393,6 @@ time = 1
 ;-| Super Motions |--------------------------------------------------------
 
 ;-| Special Motions |------------------------------------------------------
-
-[command]
-name = "AoiHanaX"
-command = ~D,B,~x
-time = 35
-
-;[command]
-;name = "AoiHanaY"
-;command = ~D,B,y
-;time = 35
 
 ;-| Double Tap |-----------------------------------------------------------
 
@@ -737,8 +742,8 @@ trigger1 = statetype = S
 trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
-; Standing Medium Kick
-[State -1, Standing Medium Kick]
+; Standing Heavy Kick
+[State -1, Standing Heavy Kick]
 type = ChangeState
 value = 240
 triggerall = command = "b"
@@ -870,24 +875,28 @@ triggerall = command = "c"
 trigger1 = statetype = A
 trigger1 = ctrl
 
+;Command Moves
+
+;---------------------------------------------------------------------------
+; Super Kick
+[State -1, Super Kick]
+type = ChangeState
+value = 1020
+triggerall = command = "QCB_a"
+triggerall = !statetype = A
+trigger1 = ctrl
+trigger2 = (StateNo=[200,999]) && movehit
 ;---------------------------------------------------------------------------
 
 ;Special Moves
 
+;---------------------------------------------------------------------------
+; Aoi Hana
 [State -1, AoiHana X]
 type = ChangeState
 value = 1300
 triggerall = command = "AoiHanaX"
 triggerall = !statetype = A
 trigger1 = ctrl
-;trigger2 = ctrl
 trigger2 = (StateNo=[200,999]) && movehit
-
-;[State -1, AoiHana Y]
-;type = ChangeState
-;value = 1300
-;triggerall = command = "AoiHanaY"
-;triggerall = !statetype = A
-;trigger1 = ctrl
-;trigger2 = ctrl
-;trigger3 = (StateNo=[200,999]) && movecontact
+;---------------------------------------------------------------------------
