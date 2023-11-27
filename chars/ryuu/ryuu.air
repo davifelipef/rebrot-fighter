@@ -279,11 +279,13 @@ Clsn2: 1
 LoopStart
 190,0, 0,0, 1
 
+; Win 1 left balloon
 [Begin Action 182]
--1,0, 0,0, 10
+181,3, 0,0, 10
 
+; Win 1 right balloon
 [Begin Action 183]
--1,0, 0,0, 10
+181,4, 0,0, 10
 
 ;--------------------------------------------------
 ; Intro
