@@ -79,20 +79,21 @@ Loading character chars/ff3_0/ff3_0.def...
   Loading anim ryuu.air...OK
   Loading snd ryuu.snd...OK
   Loading pals...OK
-  1833 expressions (743 on trigger lines)
+  1837 expressions (746 on trigger lines)
 Character ff3_0.def loaded OK
 Start of game loop
+Attempting to set graphics to 1280x720x16 mode 0x0 (fullscreen)...success
 End of game loop
-Total time: 37.95s
-Total frames: 2278 	Skipped frames: 0
-Avg game rate: 60.03
-Avg frame rate: 60.03
+Total time: 175.85s
+Total frames: 10272 	Skipped frames: 19
+Avg game rate: 58.41
+Avg frame rate: 58.31
 
 Returned from main loop
 Deinitializing...
-Frames      : 2278
-Time elapsed: 38.040 sec
-ticks: 3804, tps: 100, start 63, end 3867
+Frames      : 10272
+Time elapsed: 175.960 sec
+ticks: 17596, tps: 100, start 55, end 17651
 
 Clearing player cache...OK
 Freeing character info...OK

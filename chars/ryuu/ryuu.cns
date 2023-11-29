@@ -776,7 +776,7 @@ sprpriority = 2
 
 [State 430, 1]
 type = PlaySnd
-trigger1 = Time = 1
+trigger1 = Time = 3
 value = 0, 0
 
 [State 430, 2]
@@ -784,19 +784,19 @@ type = HitDef
 trigger1 = Time = 0
 attr = C, NA
 damage    = 28
-animtype  = Medium
+animtype  = Light
 hitflag = MAFD
 guardflag = L
-pausetime = 12,12
+pausetime = 10,11
 sparkno = 0
-sparkxy = -10,-20
+sparkxy = -10,-10
 hitsound   = 5,1
 guardsound = 6,0
 ground.type = Low
-ground.slidetime = 6
-ground.hittime  = 10
-ground.velocity = -5
-air.velocity = -2,-3
+ground.slidetime = 10
+ground.hittime  = 9
+ground.velocity = -7
+air.velocity = -1.5,-3
 down.velocity = -5,0
 down.hittime = 22
 
@@ -805,6 +805,14 @@ type = ChangeState
 trigger1 = AnimTime = 0
 value = 11
 ctrl = 1
+
+; Link to itself
+[State -1, Crouching Light Kick]
+type = changestate
+triggerall = command = "a"
+trigger1 = ctrl
+trigger2 = stateno = 430 && movehit
+value = 430
 
 ;---------------------------------------------------------------------------
 ;Crouching Heavy Kick
@@ -826,7 +834,7 @@ sprpriority = 2
 
 [State 440, 2]
 type = PlaySnd
-trigger1 = Time = 2
+trigger1 = Time = 5
 value = 0, 2
 
 [State 440, 3]
