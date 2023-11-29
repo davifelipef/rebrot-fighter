@@ -587,7 +587,7 @@ value = 240
 type    = S
 movetype= A
 physics = S
-juggle  = 5
+juggle  = 2
 poweradd= 30
 ctrl = 0
 velset = 0,0
@@ -897,6 +897,7 @@ type = CtrlSet
 trigger1 = Time = 17
 value = 1
 
+; Link to the light kick
 [State -1, Jump Light Kick]
 type = changestate
 triggerall = command = "a"
@@ -904,6 +905,7 @@ trigger1 = ctrl
 trigger2 = stateno = 600 && movehit
 value = 630
 
+; Link to the heavy punch
 [State -1, Jump Heavy Punch]
 type = changestate
 triggerall = command = "y"
@@ -942,11 +944,19 @@ sparkxy = -10,-28
 hitsound   = 5,3
 guardsound = 6,0
 animtype = Heavy
-ground.type = Trip ; default: High
+ground.type = High 
 ground.slidetime = 12
 ground.hittime  = 14
 ground.velocity = -6
 air.velocity = -3,-4
+
+; Link to the heavy punch
+[State -1, Jump Heavy Kick]
+type = changestate
+triggerall = command = "b"
+trigger1 = ctrl
+trigger2 = stateno = 620 && movehit
+value = 640
 
 ;---------------------------------------------------------------------------
 ;Jump Light Kick
@@ -1016,7 +1026,7 @@ sparkxy = -10,-28
 hitsound   = 5,3
 guardsound = 6,0
 animtype = Heavy
-ground.type = High
+ground.type = Trip ; ends the combo
 ground.slidetime = 12
 ground.hittime  = 15
 ground.velocity = -7
@@ -1306,7 +1316,7 @@ value = 5100 ;Hit ground
 type    = S
 movetype= A
 physics = N
-juggle  = 6
+juggle  = 4
 poweradd= 30
 velset = 0,0
 anim = 1020
@@ -1318,23 +1328,23 @@ type = VelMul
 trigger1 = 1
 x = .85 * ifelse (AnimElemTime(6) < 0, 1, .8)
 
-[State 1020, Afterimage]
-type = AfterImage
-trigger1 = Time = 0
-length = 13
-PalBright   =  30, 30,  0
-PalContrast =  70, 70, 20
-PalAdd      = -10,-10,-10
-PalMul      = .85,.85,.50
-TimeGap  = 1
-FrameGap = 2
-Trans = Add
-time = 2
+;[State 1020, Afterimage]
+;type = AfterImage
+;trigger1 = Time = 0
+;length = 13
+;PalBright   =  30, 30,  0
+;PalContrast =  70, 70, 20
+;PalAdd      = -10,-10,-10
+;PalMul      = .85,.85,.50
+;TimeGap  = 1
+;FrameGap = 2
+;Trans = Add
+;time = 2
 
-[State 1020, Afterimage]
-type = AfterImageTime
-trigger1 = AnimElemTime(8) < 0
-time = 2
+;[State 1020, Afterimage]
+;type = AfterImageTime
+;trigger1 = AnimElemTime(8) < 0
+;time = 2
 
 [State 1020, 1]
 type = PlaySnd
@@ -1357,10 +1367,10 @@ type = PosAdd
 trigger1 = AnimElem = 4
 x = 5
 
-[State 1020, 5]
-type = VelSet
-trigger1 = AnimElem = 4
-x = 13
+;[State 1020, 5]
+;type = VelSet
+;trigger1 = AnimElem = 4
+;x = 13
 
 [State 1020, 6]
 type = HitDef
