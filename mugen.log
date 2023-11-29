@@ -2,7 +2,7 @@
 M.U.G.E.N ver 1.00 (2011.01.18) status log
 ------------------------------------------
 Parsing command line...
-Command line: C:\Users\davir\Documents\Programação\rebrot-fighter\mugen.exe
+Command line: C:\Users\Administrativo\Documents\Programas\rebrot-fighter\mugen.exe ff3_0 ff3_0
 Parse command line OK
 Initializing...
 Allocating game variables
@@ -22,7 +22,7 @@ Initializing font...OK
 Initializing game variables...OK
 Loading system fonts...OK
 Loading options...
-Initializing pads...OK
+Initializing pads...failed
 Reinitializing input engine...OK
 Remapping keys...OK
 Reinitializing input engine...OK
@@ -61,13 +61,14 @@ System loaded OK
 Initialize OK
 Set up graphics...timer...OK
 Initializing character info...OK
-Initializing select screen...finding characters...OK
+Playing quick VS.
 
 Entering main loop
-Entering character select.
-attempting load and start...no BGM...Attempting to set graphics to 1280x720x16 mode 0x0 (fullscreen)...success
-attempting load and start...no BGM...Entering character select.
-attempting load and start...no BGM...attempting load and start...no BGM...Loading character chars/ryuu/ryuu.def...
+Initializing stage...
+  Loading BG...OK
+  Allocating helpers...OK
+Stage initialized OK
+Loading character chars/ff3_0/ff3_0.def...
   Loading info...OK
   Loading cmd command set ryuu.cmd...OK
   Loading cns ryuu.cns...OK
@@ -78,45 +79,23 @@ attempting load and start...no BGM...attempting load and start...no BGM...Loadin
   Loading anim ryuu.air...OK
   Loading snd ryuu.snd...OK
   Loading pals...OK
-  1855 expressions (761 on trigger lines)
-Character ryuu.def loaded OK
-Loading character chars/mb2/mb2.def...
-  Loading info...OK
-  Loading cmd command set mb2.cmd...OK
-  Loading cns mb2.cns...OK
-  Loading cmd state entry mb2.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff mb2.sff...OK
-  Loading anim mb2.air...OK
-  Loading snd mb2.snd...OK
-  Loading pals...OK
-  1580 expressions (681 on trigger lines)
-Character mb2.def loaded OK
-attempting load and start...no BGM...Initializing stage...
-  Loading BG...attempting load of sound/sad_brothers.mp3...hooking mixer callback...
-success!
-OK
-  Allocating helpers...OK
-Stage initialized OK
-prebuffering BGM...
+  1833 expressions (743 on trigger lines)
+Character ff3_0.def loaded OK
 Start of game loop
 End of game loop
-Total time: 316.83s
-Total frames: 19003 	Skipped frames: 7704
-Avg game rate: 59.98
-Avg frame rate: 35.66
+Total time: 37.95s
+Total frames: 2278 	Skipped frames: 0
+Avg game rate: 60.03
+Avg frame rate: 60.03
 
-attempting load and start...no BGM...Entering character select.
-attempting load and start...no BGM...Returned from main loop
+Returned from main loop
 Deinitializing...
-Frames      : 19003
-Time elapsed: 336.480 sec
-ticks: 33648, tps: 100, start 309, end 33957
+Frames      : 2278
+Time elapsed: 38.040 sec
+ticks: 3804, tps: 100, start 63, end 3867
 
 Clearing player cache...OK
 Freeing character info...OK
-Freeing select screen...OK
 Freeing fight data...OK
 Freeing system data...OK
 Freeing game variables...OK
@@ -124,14 +103,7 @@ Deinitializing input...pad...keyboard...OK
 Removing callbacks...OK
 Deintializing timer...OK
 Deinitializing graphics...OK
-Deinitializing BGM...Cleaning up mixer callback...unhooking mixer callback...
-
-Mixer callback was entered 6865 times
-Mixer callback timing stats (last 6865 calls):
-	33.000000 median, 40.404807 avg, 42.129208 sample std. dev.
-Top 10 slowest times:	2157 (1), 1299 (1), 1232 (1), 712 (1), 628 (1), 570 (1), 433 (1), 272 (1), 221 (1), 206 (1)
-Top 10 fastest times:	9 (1), 11 (1), 12 (1), 13 (4), 14 (5), 15 (16), 16 (44), 17 (81), 18 (113), 19 (164)
-OK
+Deinitializing BGM...OK
 Deinitializing sound...OK
 Successful program termination.
 
