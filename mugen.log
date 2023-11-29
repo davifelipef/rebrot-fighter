@@ -82,18 +82,17 @@ Loading character chars/ff3_0/ff3_0.def...
   1837 expressions (746 on trigger lines)
 Character ff3_0.def loaded OK
 Start of game loop
-Attempting to set graphics to 1280x720x16 mode 0x0 (fullscreen)...success
 End of game loop
-Total time: 175.85s
-Total frames: 10272 	Skipped frames: 19
-Avg game rate: 58.41
-Avg frame rate: 58.31
+Total time: 35.42s
+Total frames: 2126 	Skipped frames: 0
+Avg game rate: 60.02
+Avg frame rate: 60.02
 
 Returned from main loop
 Deinitializing...
-Frames      : 10272
-Time elapsed: 175.960 sec
-ticks: 17596, tps: 100, start 55, end 17651
+Frames      : 2126
+Time elapsed: 35.520 sec
+ticks: 3552, tps: 100, start 58, end 3610
 
 Clearing player cache...OK
 Freeing character info...OK

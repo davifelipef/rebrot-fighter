@@ -1,10 +1,8 @@
 [Remap]
 x = a ; light punch
 y = b ; heavy punch
-z = ; disabled
 a = x ; light kick
 b = y ; heavy kick
-c = ; disabled
 s = s ; taunt 
 
 [Defaults]

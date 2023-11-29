@@ -1788,7 +1788,7 @@ type = ChangeState
 trigger1 = AnimElem = 3
 trigger2 = AnimElem = 4
 triggerall = var(59) > 0
-value = 1220
+value = 1300
 ctrl = 0
 
 [State 0, ChangeState]
