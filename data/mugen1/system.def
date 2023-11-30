@@ -78,7 +78,7 @@ font6.height = 13
  ;are the same, and both BGMs are specified to loop.
   ;Music to play at title screen.
 title.bgm = 
-title.bgm.volume = 100    ;volume scaling factor in percent. 100 is default
+title.bgm.volume = 60    ;volume scaling factor in percent. 100 is default
 title.bgm.loop = 1        ;Set to 0 to prevent looping
 title.bgm.loopstart = 
 title.bgm.loopend = 
@@ -426,7 +426,7 @@ time = 150                ;Time to show screen
 fadein.time = 20
 fadeout.time = 25
 ;Match text in arcade modes
-match.text = "Match %i"   ;%i can be used for the match number
+match.text = "Luta %i"   ;%i can be used for the match number
 match.offset = 20, 709
 match.font = 2,0,1
 ;Big portraits
@@ -618,20 +618,20 @@ enabled = 1               ;Set to 1 to show continue screen, 0 to disable
 pos = 640,240             ;Position
 ;***Known issue*** The display elements below use the fight.def resources
 ;instead of the ones defined in this file.
-continue.text = "CONTINUE?"
+continue.text = "QUER CONTINUAR?"
 continue.font = 1,0,0
 continue.offset = 0,0
 ;Inactive and active (selected) YES/NO text
-yes.text = "YES"
+yes.text = "SIM"
 yes.font = 1,0,0, 128,128,128
 yes.offset = -80, 60
-yes.active.text = "YES"
+yes.active.text = "SIM"
 yes.active.font = 1,3,0
 yes.active.offset = -80, 60
-no.text = "NO"
+no.text = "NAO"
 no.font = 1,0,0, 128,128,128
 no.offset = 80, 60
-no.active.text = "NO"
+no.active.text = "NAO"
 no.active.font = 1,3,0
 no.active.offset = 80, 60
 
@@ -659,7 +659,7 @@ p1.window = 0,0, 1279,500
 p1.name.offset = 40,570
 p1.name.font = 3,3,1
 ;Win quote text
-winquote.text = "Winner!" ;Default win quote text to show
+winquote.text = "Ganhei!" ;Default win quote text to show
 winquote.offset = 40,615
 winquote.font = 5,0,1
 winquote.window = 38,521, 1241,708
@@ -699,7 +699,7 @@ velocity = 0,1.5
 ;It will not be displayed if the winning character has an ending.
 [Win Screen]
 enabled = 1               ;Set to 1 to show win screen, 0 to disable
-wintext.text = "Congratulations!"
+wintext.text = "Parabens, voce ganhou!"
 wintext.font = 3,0,0
 wintext.offset = 640,240
 wintext.displaytime = -1

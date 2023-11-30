@@ -73,8 +73,8 @@ color 		= 0,0,0
 yscale 		= .2
 
 [Music]
-bgmusic 	= sound/sad_brothers.mp3
-bgvolume 	= 60
+bgmusic 	= sound/Sad Brothers.mp3
+bgvolume 	= 50
 
 [BGdef]
 spr 		= stages/nersograd.sff

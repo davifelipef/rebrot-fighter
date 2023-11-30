@@ -102,11 +102,9 @@ down.friction.threshold = .05         ;If the player's speed drops below this th
 ;0 or more alternate language sections may be added, preceded by the
 ;ISO 639-1 code followed by a ".", e.g. "[ja.Quotes]".
 ;See language setting in mugen.cfg.
-[pt.Quotes]
-victory1 = "Eu realmente não me importo se ganho ou perco."
-victory2 = "Você me obrigou a isso."
-victory3 = "Foi divertido."
-victory4 = "Acho que eu não precisava ter tirado os óculos."
+[Quotes]
+victory1 = "Essa luta nao foi realista, eu deveria ter ganhado com um soco."
+victory2 = "Patetico."
 
 ;---------------------------------------------------------------------------
 ; Variable usage:

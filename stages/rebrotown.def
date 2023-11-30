@@ -73,8 +73,8 @@ color 		= 0,0,0
 yscale 		= .2
 
 [Music]
-bgmusic 	= 
-bgvolume 	= 255
+bgmusic 	= sound/With A Little Help From My Friends.mp3
+bgvolume 	= 60
 
 [BGdef]
 spr 		= stages/rebrotown.sff
