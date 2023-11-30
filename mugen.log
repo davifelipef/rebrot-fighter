@@ -70,29 +70,29 @@ Initializing stage...
 Stage initialized OK
 Loading character chars/ff3_0/ff3_0.def...
   Loading info...OK
-  Loading cmd command set ryuu.cmd...OK
-  Loading cns ryuu.cns...OK
-  Loading cmd state entry ryuu.cmd...OK
+  Loading cmd command set cel.cmd...OK
+  Loading cns cel.cns...OK
+  Loading cmd state entry cel.cmd...OK
   Loading common states common1.cns...OK
   Unloading command names...OK
-  Loading sff ryuu.sff...OK
-  Loading anim ryuu.air...OK
-  Loading snd ryuu.snd...OK
+  Loading sff cel.sff...OK
+  Loading anim cel.air...OK
+  Loading snd cel.snd...OK
   Loading pals...OK
-  1837 expressions (746 on trigger lines)
+  1525 expressions (666 on trigger lines)
 Character ff3_0.def loaded OK
 Start of game loop
 End of game loop
-Total time: 8.17s
-Total frames: 491 	Skipped frames: 0
-Avg game rate: 60.10
-Avg frame rate: 60.10
+Total time: 30.09s
+Total frames: 1806 	Skipped frames: 0
+Avg game rate: 60.02
+Avg frame rate: 60.02
 
 Returned from main loop
 Deinitializing...
-Frames      : 491
-Time elapsed: 8.320 sec
-ticks: 832, tps: 100, start 110, end 942
+Frames      : 1806
+Time elapsed: 30.140 sec
+ticks: 3014, tps: 100, start 56, end 3070
 
 Clearing player cache...OK
 Freeing character info...OK
