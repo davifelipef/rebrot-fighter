@@ -2,7 +2,7 @@
 M.U.G.E.N ver 1.00 (2011.01.18) status log
 ------------------------------------------
 Parsing command line...
-Command line: C:\Users\davir\Documents\Programação\rebrot-fighter\mugen.exe
+Command line: C:\Users\Administrativo\Documents\Programas\rebrot-fighter\mugen.exe ff3_0 ff3_0
 Parse command line OK
 Initializing...
 Allocating game variables
@@ -61,11 +61,14 @@ System loaded OK
 Initialize OK
 Set up graphics...timer...OK
 Initializing character info...OK
-Initializing select screen...finding characters...OK
+Playing quick VS.
 
 Entering main loop
-Entering character select.
-attempting load and start...no BGM...attempting load and start...no BGM...Loading character chars/cel/cel.def...
+Initializing stage...
+  Loading BG...OK
+  Allocating helpers...OK
+Stage initialized OK
+Loading character chars/ff3_0/ff3_0.def...
   Loading info...OK
   Loading cmd command set cel.cmd...OK
   Loading cns cel.cns...OK
@@ -77,58 +80,22 @@ attempting load and start...no BGM...attempting load and start...no BGM...Loadin
   Loading snd cel.snd...OK
   Loading pals...OK
   1525 expressions (666 on trigger lines)
-Character cel.def loaded OK
-Loading character chars/mb2/mb2.def...
-  Loading info...OK
-  Loading cmd command set mb2.cmd...OK
-  Loading cns mb2.cns...OK
-  Loading cmd state entry mb2.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff mb2.sff...OK
-  Loading anim mb2.air...OK
-  Loading snd mb2.snd...OK
-  Loading pals...OK
-  1580 expressions (681 on trigger lines)
-Character mb2.def loaded OK
-attempting load and start...no BGM...Initializing stage...
-  Loading BG...OK
-  Allocating helpers...attempting load of sound/with a little help from my friends.mp3...OK
-Stage initialized OK
-hooking mixer callback...
-success!
+Character ff3_0.def loaded OK
 Start of game loop
-prebuffering BGM...
-Attempting to set graphics to 1280x720x16 mode 0x0 (fullscreen)...success
 End of game loop
-Total time: 18.66s
-Total frames: 1109 	Skipped frames: 29
-Avg game rate: 59.43
-Avg frame rate: 57.88
+Total time: 35.62s
+Total frames: 2138 	Skipped frames: 0
+Avg game rate: 60.02
+Avg frame rate: 60.02
 
-attempting load and start...no BGM...attempting load and start...no BGM...Initializing stage...
-  Loading BG...OK
-  Allocating helpers...OK
-Stage initialized OK
-attempting load of sound/with a little help from my friends.mp3...success!
-Start of game loop
-prebuffering BGM...
-End of game loop
-Total time: 27.98s
-Total frames: 1677 	Skipped frames: 415
-Avg game rate: 59.94
-Avg frame rate: 45.10
-
-attempting load and start...no BGM...Entering character select.
-attempting load and start...no BGM...Returned from main loop
+Returned from main loop
 Deinitializing...
-Frames      : 2786
-Time elapsed: 64.890 sec
-ticks: 6489, tps: 100, start 228, end 6717
+Frames      : 2138
+Time elapsed: 35.670 sec
+ticks: 3567, tps: 100, start 67, end 3634
 
 Clearing player cache...OK
 Freeing character info...OK
-Freeing select screen...OK
 Freeing fight data...OK
 Freeing system data...OK
 Freeing game variables...OK
@@ -136,14 +103,7 @@ Deinitializing input...pad...keyboard...OK
 Removing callbacks...OK
 Deintializing timer...OK
 Deinitializing graphics...OK
-Deinitializing BGM...Cleaning up mixer callback...unhooking mixer callback...
-
-Mixer callback was entered 1172 times
-Mixer callback timing stats (last 1172 calls):
-	30.000000 median, 35.327645 avg, 23.949313 sample std. dev.
-Top 10 slowest times:	601 (1), 140 (1), 135 (1), 128 (1), 123 (1), 122 (1), 108 (1), 107 (1), 105 (1), 101 (1)
-Top 10 fastest times:	10 (1), 11 (2), 12 (1), 13 (4), 14 (14), 15 (29), 16 (28), 17 (29), 18 (12), 19 (16)
-OK
+Deinitializing BGM...OK
 Deinitializing sound...OK
 Successful program termination.
 
