@@ -1246,6 +1246,287 @@ trigger1 = Vel Y > 0
 trigger1 = Pos Y >= 0
 value = 5100 ;Hit ground
 
+;---------------------------------------------------------------------------
+; Special moves
+;---------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------
+; Super Kick
+; CNS difficulty: advanced
+; Description: This is a complicated attack move. If you're a beginner,
+;     you should skip looking at this for now and check it later when
+;     you are more comfortable with the cns.
+;     This move puts the other player in a custom get-hit state.
+;     The line "p2stateno = 1025" in the HitDef does this. KFM has some
+;     palette effects as well as after-image effects.
+[Statedef 1020]
+type    = S
+movetype= A
+physics = N
+juggle  = 4
+poweradd= 30
+velset = 0,0
+anim = 1020
+ctrl = 0
+sprpriority = 2
+
+[State 1020, Friction]
+type = VelMul
+trigger1 = 1
+x = .85 * ifelse (AnimElemTime(6) < 0, 1, .8)
+
+;[State 1020, Afterimage]
+;type = AfterImage
+;trigger1 = Time = 0
+;length = 13
+;PalBright   =  30, 30,  0
+;PalContrast =  70, 70, 20
+;PalAdd      = -10,-10,-10
+;PalMul      = .85,.85,.50
+;TimeGap  = 1
+;FrameGap = 2
+;Trans = Add
+;time = 2
+
+;[State 1020, Afterimage]
+;type = AfterImageTime
+;trigger1 = AnimElemTime(8) < 0
+;time = 2
+
+[State 1020, 1]
+type = PlaySnd
+trigger1 = Time = 2
+value = 0, 3
+
+[State 1020, 2]
+type = PosAdd
+trigger1 = AnimElem = 2
+x = 20
+
+[State 1020, 3]
+type = PosAdd
+trigger1 = AnimElem = 3
+trigger2 = AnimElem = 12
+x = 10
+
+[State 1020, 4]
+type = PosAdd
+trigger1 = AnimElem = 4
+x = 5
+
+;[State 1020, 5]
+;type = VelSet
+;trigger1 = AnimElem = 4
+;x = 13
+
+[State 1020, 6]
+type = HitDef
+trigger1 = AnimElem = 4
+attr = S, SA
+animtype  = Hard
+damage    = 95, 5
+getpower  = 0
+priority  = 4
+guardflag = MA
+pausetime = 8,7
+sparkxy = -10,-60
+hitsound   = 5,4
+guardsound = 6,0
+ground.type = Low
+ground.slidetime = 20
+ground.hittime  = 22
+ground.velocity = -8,-7
+guard.velocity = -7
+air.velocity = -8,-7
+airguard.velocity = -5, -4
+fall = 1
+p2stateno = 1025    ;Make p2 go to state 1025 on hit
+p2facing = 1        ;Force to face p1
+
+[State 1020, 7]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;------------------
+; Hit by Super Kick - shaking from the hit
+; (a custom gethit state)
+; See State 1020 for details
+[Statedef 1025]
+type    = A
+movetype= H
+physics = N
+velset = 0,0
+
+[State 1025, Anim] ;Custom animation
+type = ChangeAnim2
+trigger1 = 1
+value = 1025
+
+[State 1025, State]
+type = ChangeState
+trigger1 = HitShakeOver = 1
+value = 1026
+
+;------------------
+; Hit by Super Kick - flying through the air
+; (a custom gethit state)
+[Statedef 1026]
+type    = A
+movetype= H
+physics = N
+
+[State 1026, Velocity]
+type = HitVelSet
+trigger1 = Time = 0
+x = 1
+y = 1
+
+[State 1026, Gravity]
+type = VelAdd
+trigger1 = 1
+y = .45
+
+[State 1026, No scroll]
+type = ScreenBound
+triggerall = Pos y < -15
+trigger1 = BackEdgeBodyDist < 65
+trigger2 = FrontEdgeBodyDist < 65
+value = 1
+movecamera = 0,1
+
+[State 1026, Hit wall]
+type = ChangeState
+triggerall = Pos y < -15
+trigger1 = BackEdgeBodyDist <= 20
+trigger2 = FrontEdgeBodyDist <= 20
+value = 1027
+
+[State 1026, Hit ground]
+type = SelfState
+trigger1 = (Vel y > 0) && (Pos y >= 0)
+value = 5100
+
+;------------------
+; Hit by Super Kick - hit wall
+; (a custom gethit state)
+[Statedef 1027]
+type    = A
+movetype= H
+physics = N
+
+[State 1027, Turn]
+type = Turn
+trigger1 = (Time = 0) && (FrontEdgeBodyDist <= 30)
+
+[State 1027, Pos]
+type = PosAdd
+trigger1 = Time = 0
+x = 15 - BackEdgeBodyDist
+
+[State 1027, Stop moving]
+type = PosFreeze
+trigger1 = 1
+x = 1
+y = 1
+
+[State 1027, No scroll]
+type = ScreenBound
+trigger1 = 1
+value = 1
+movecamera = 0,1
+
+[State 1027, Spark]
+type = Explod
+trigger1 = Time = 0
+anim = F72
+pos = 0, floor (screenpos y) - 50
+postype = back
+sprpriority = 3
+
+[State 1027, Anim]
+type = ChangeAnim2
+trigger1 = Time = 0
+value = 1027
+
+[State 1027, Sound]
+type = PlaySnd
+trigger1 = Time = 0
+value = F7,0
+
+[State 1027, State]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 1028
+
+;------------------
+; Hit by Fast Kung Fu Palm - bounce off wall
+; (a custom gethit state)
+[Statedef 1028]
+type    = A
+movetype= H
+physics = N
+
+; This code bit makes the character not being able to be hit
+; by attacks or projectiles while falling
+;[State 1028, 1]
+;type = NotHitBy
+;trigger1 = 1
+;value = , NA, NP
+
+[State 1028, Vel Y]
+type = VelSet
+trigger1 = Time = 0
+y = -6
+
+[State 1028, Vel X]
+type = VelSet
+trigger1 = Time = 0
+x = 1.6
+
+[State 1028, Turn]
+type = Turn
+trigger1 = (Time = 0) && (BackEdgeDist < 30)
+
+[State 1028, Gravity]
+type = VelAdd
+trigger1 = 1
+y = .35
+
+[State 1028, Anim 5050] ;Self falling animation
+type = ChangeAnim
+trigger1 = Time = 0
+trigger1 = !SelfAnimExist(5052)
+value = 5050
+
+[State 1028, Anim 5052] ;Self falling animation (diagup type)
+type = ChangeAnim
+trigger1 = Time = 0
+trigger1 = SelfAnimExist(5052)
+value = 5052
+
+[State 1028, Anim 5060] ;Coming down - normal
+type = ChangeAnim
+trigger1 = Vel Y > -2
+trigger1 = Anim = 5050
+trigger1 = SelfAnimExist(5060)
+persistent = 0
+value = 5060
+
+[State 1028, Anim 5062] ;Coming down - diagup type
+type = ChangeAnim
+trigger1 = Vel Y > -2
+trigger1 = Anim = 5052
+trigger1 = SelfAnimExist(5062)
+persistent = 0
+value = 5062
+
+[State 1028, Hit ground]
+type = SelfState
+trigger1 = (Vel y > 0) && (Pos y >= 0)
+value = 5100
+
 
 ;---------------------------------------------------------------------------
 ; Override common states (use same number to override) :
