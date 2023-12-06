@@ -233,13 +233,13 @@ _
 [Select Info]
 fadein.time = 10
 fadeout.time = 10
-rows = 8
-columns = 5
+rows = 6
+columns = 6
 wrapping = 1              ;1 to let cursor wrap around
-pos = 380,100             ;Position to draw to. default: 480,128
+pos = 360,100             ;Position to draw to. default: 480,128
 showemptyboxes = 0        ;1 to show empty boxes
 moveoveremptyboxes = 0    ;1 to allow cursor to move over empty boxes
-cell.size = 100,100       ;x,y size of each cell (in pixels) default: 100,100
+cell.size = 80,80       ;x,y size of each cell (in pixels) default: 100,100
 cell.spacing = 10         ;Space between each cell
 
 cell.bg.spr = 150,0       ;Note: Don't use animation for cells
