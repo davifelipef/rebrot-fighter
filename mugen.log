@@ -47,7 +47,7 @@ Loading system...
   Load [End Credits]...OK
   Load TitleBG...VersusBG...VictoryBG...SelectBG...OptionBG...OK
   Loading fight data
-    Opening fight data file data/mugen1/fight.def...OK
+    Opening fight data file data/rebrotfighter/fight.def...OK
     Reading [Files]...OK
     Loading fonts...OK
     Load fight anim...OK
@@ -65,193 +65,15 @@ Initializing select screen...finding characters...OK
 
 Entering main loop
 Entering character select.
-attempting load and start...no BGM...attempting load and start...no BGM...Entering character select.
-attempting load and start...no BGM...attempting load and start...no BGM...Loading character chars/levi/levi.def...
-  Loading info...OK
-  Loading cmd command set levi.cmd...OK
-  Loading cns levi.cns...OK
-  Loading cmd state entry levi.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff levi.sff...OK
-  Loading anim levi.air...OK
-  Loading snd levi.snd...OK
-  Loading pals...OK
-  1796 expressions (762 on trigger lines)
-Character levi.def loaded OK
-Loading character chars/mb2/mb2.def...
-  Loading info...OK
-  Loading cmd command set mb2.cmd...OK
-  Loading cns mb2.cns...OK
-  Loading cmd state entry mb2.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff mb2.sff...OK
-  Loading anim mb2.air...OK
-  Loading snd mb2.snd...OK
-  Loading pals...OK
-  1580 expressions (681 on trigger lines)
-Character mb2.def loaded OK
-attempting load and start...no BGM...Initializing stage...
-  Loading BG...attempting load of sound/with a little help from my friends.mp3...hooking mixer callback...
-success!
-OK
-  Allocating helpers...OK
-Stage initialized OK
-Start of game loop
-prebuffering BGM...
-End of game loop
-Total time: 31.39s
-Total frames: 1884 	Skipped frames: 0
-Avg game rate: 60.02
-Avg frame rate: 60.02
-
+attempting load and start...no BGM...Attempting to set graphics to 1280x720x16 mode 0x0 (fullscreen)...success
 attempting load and start...no BGM...Entering character select.
-attempting load and start...no BGM...Initializing stage...
-  Loading BG...OK
-  Allocating helpers...OK
-Stage initialized OK
-Loading character chars/cel/cel.def...
-  Loading info...OK
-  Loading cmd command set cel.cmd...OK
-  Loading cns cel.cns...OK
-  Loading cmd state entry cel.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff cel.sff...OK
-  Loading anim cel.air...OK
-  Loading snd cel.snd...OK
-  Loading pals...OK
-  1618 expressions (693 on trigger lines)
-Character cel.def loaded OK
-Start of game loop
-End of game loop
-Total time: 28.65s
-Total frames: 1720 	Skipped frames: 0
-Avg game rate: 60.03
-Avg frame rate: 60.03
-
-Entering character select.
-attempting load and start...no BGM...Initializing stage...
-  Loading BG...OK
-  Allocating helpers...OK
-Stage initialized OK
-Loading character chars/lazz/lazz.def...
-  Loading info...OK
-  Loading cmd command set lazz.cmd...OK
-  Loading cns lazz.cns...OK
-  Loading cmd state entry lazz.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff lazz.sff...OK
-  Loading anim lazz.air...OK
-  Loading snd lazz.snd...OK
-  Loading pals...OK
-  1580 expressions (681 on trigger lines)
-Character lazz.def loaded OK
-Loading character chars/liv/liv.def...
-  Loading info...OK
-  Loading cmd command set liv.cmd...OK
-  Loading cns liv.cns...OK
-  Loading cmd state entry liv.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff liv.sff...OK
-  Loading anim liv.air...OK
-  Loading snd liv.snd...OK
-  Loading pals...(1,2)OK
-  1569 expressions (677 on trigger lines)
-Character liv.def loaded OK
-Start of game loop
-End of game loop
-Total time: 30.82s
-Total frames: 1850 	Skipped frames: 0
-Avg game rate: 60.03
-Avg frame rate: 60.03
-
-Entering character select.
-attempting load and start...no BGM...Initializing stage...
-  Loading BG...OK
-  Allocating helpers...OK
-Stage initialized OK
-Loading character chars/kaoru/kaoru.def...
-  Loading info...OK
-  Loading cmd command set kaoru.cmd...OK
-  Loading cns kaoru.cns...OK
-  Loading cmd state entry kaoru.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff kaoru.sff...OK
-  Loading anim kaoru.air...OK
-  Loading snd kaoru.snd...OK
-  Loading pals...OK
-  1580 expressions (681 on trigger lines)
-Character kaoru.def loaded OK
-Loading character chars/mb/mb.def...
-  Loading info...OK
-  Loading cmd command set mb.cmd...OK
-  Loading cns mb.cns...OK
-  Loading cmd state entry mb.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff mb.sff...OK
-  Loading anim mb.air...OK
-  Loading snd mb.snd...OK
-  Loading pals...OK
-  1580 expressions (681 on trigger lines)
-Character mb.def loaded OK
-Start of game loop
-End of game loop
-Total time: 30.82s
-Total frames: 1850 	Skipped frames: 0
-Avg game rate: 60.03
-Avg frame rate: 60.03
-
-Entering character select.
-attempting load and start...no BGM...Initializing stage...
-  Loading BG...OK
-  Allocating helpers...OK
-Stage initialized OK
-Loading character chars/alisson/alisson.def...
-  Loading info...OK
-  Loading cmd command set alisson.cmd...OK
-  Loading cns alisson.cns...OK
-  Loading cmd state entry alisson.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff alisson.sff...OK
-  Loading anim alisson.air...OK
-  Loading snd alisson.snd...OK
-  Loading pals...OK
-  1579 expressions (680 on trigger lines)
-Character alisson.def loaded OK
-Loading character chars/valf/valf.def...
-  Loading info...OK
-  Loading cmd command set valf.cmd...OK
-  Loading cns valf.cns...OK
-  Loading cmd state entry valf.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff valf.sff...OK
-  Loading anim valf.air...OK
-  Loading snd valf.snd...OK
-  Loading pals...OK
-  1580 expressions (681 on trigger lines)
-Character valf.def loaded OK
-Start of game loop
-End of game loop
-Total time: 30.90s
-Total frames: 1850 	Skipped frames: 87
-Avg game rate: 59.87
-Avg frame rate: 57.06
-
-Entering character select.
-attempting load and start...no BGM...attempting load and start...no BGM...Entering character select.
-attempting load and start...no BGM...Returned from main loop
+attempting load and start...no BGM...Options Screen
+Return from Options Screen
+Returned from main loop
 Deinitializing...
-Frames      : 9154
-Time elapsed: 271.490 sec
-ticks: 27149, tps: 100, start 105, end 27254
+Frames      : 0
+Time elapsed: 22.550 sec
+ticks: 2255, tps: 100, start 56, end 2311
 
 Clearing player cache...OK
 Freeing character info...OK
@@ -263,14 +85,7 @@ Deinitializing input...pad...keyboard...OK
 Removing callbacks...OK
 Deintializing timer...OK
 Deinitializing graphics...OK
-Deinitializing BGM...Cleaning up mixer callback...unhooking mixer callback...
-
-Mixer callback was entered 5031 times
-Mixer callback timing stats (last 5031 calls):
-	9.000000 median, 13.070563 avg, 17.006127 sample std. dev.
-Top 10 slowest times:	859 (1), 205 (1), 199 (1), 159 (1), 146 (1), 128 (1), 125 (1), 121 (1), 115 (1), 114 (1)
-Top 10 fastest times:	4 (3), 5 (61), 6 (270), 7 (1141), 8 (820), 9 (474), 10 (337), 11 (288), 12 (195), 13 (204)
-OK
+Deinitializing BGM...OK
 Deinitializing sound...OK
 Successful program termination.
 
