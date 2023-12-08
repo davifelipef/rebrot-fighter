@@ -34,8 +34,8 @@ IntPersistIndex = 60
 FloatPersistIndex = 40
 
 [Size]
-xscale = 1.7           ;Horizontal scaling factor.
-yscale = 1.7           ;Vertical scaling factor.
+xscale = 1.5           ;Horizontal scaling factor.
+yscale = 1.5           ;Vertical scaling factor.
 ground.back = 20     ;Player width (back, ground)
 ground.front = 30    ;Player width (front, ground)
 air.back = 12        ;Player width (back, air)
