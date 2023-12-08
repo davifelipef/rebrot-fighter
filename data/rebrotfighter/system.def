@@ -1,8 +1,8 @@
 ; Definitions of system screens
 
-; Motif: MUGEN1
+; Motif:REBROT Fighter
 ; Optimal resolution: 1280x720
-; Supported languages: en, ja
+; Supported languages: en, pt
 
 ; Notes about fonts:
 ;   - up to 10 fonts can be specified in the [Files] section.
@@ -234,11 +234,11 @@ _
 [Select Info]
 fadein.time = 10
 fadeout.time = 10
-rows = 4
-columns = 3
+rows = 6
+columns = 6
 wrapping = 0              ;1 to let cursor wrap around
 pos = 480,128             ;Position to draw to
-showemptyboxes = 1        ;1 to show empty boxes
+showemptyboxes = 0        ;1 to show empty boxes
 moveoveremptyboxes = 1    ;1 to allow cursor to move over empty boxes
 cell.size = 100,100       ;x,y size of each cell (in pixels)
 cell.spacing = 10         ;Space between each cell
